@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './asset/scss/main.scss';
+// import './asset/js/main.js';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Menu from './component/Menu.js';
+import Animation from "./component/Animation.js";
+import Logo from "./component/Logo.js";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class Main extends Component {
+    render() {
+        return(
+            <div>
+               <Menu /> 
+            </div>
+        );
+    }
+}
+
+export default Main;
+
+//ReactDOM.render(<Main />, document.getElementById("test-react"));

@@ -1,0 +1,77 @@
+@import "mixin";
+@import "globals";
+@import "animation";
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    @include zero-space;
+    background-color: $bgdarkcolor;
+    margin-bottom: 2000px;
+}
+
+#nav-header {
+    .nav{
+        @include full-size(100%, 10vh);
+        @include zero-position(relative); 
+        background-color: #0b0c10; //new color #009688
+        z-index: 10;
+        opacity: 0.9;
+        display: grid;
+        grid-template-columns: 80px auto;
+
+        .menu-btn {
+            @include zero-position(relative);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+
+            .menu-bar-1, .menu-bar-2, .menu-bar-3 {
+                height: 5px;
+                margin: 4px auto;
+                padding: auto;
+                width: 35px;
+                background-color: $color12;
+                grid-row-gap: -2px;
+                border-radius: 6px;
+            }
+        }
+        .nav-logo {
+            border: 1px solid red;
+            display: flex;
+
+
+            .img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .bg-svg{
+        .svg-logo {  
+            @include full-size(400px, 400px);
+            @include center;
+            @include center-absolute();
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .bg-svg{
+        .svg-logo {  
+            @include center-absolute(50%, 50%, -50%, -60%);
+        }
+    }
+}
