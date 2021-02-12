@@ -284,121 +284,121 @@ function randCircle() {
 
 
 
-randCircle();
+// randCircle();
 
 
-window.addEventListener("load", () => {
-  setTimeout(()=> {
-    let audio1 = new Audio(importaudio1);
-    let audio11 = new Audio(importaudio11);
-    audio1.play();
-    audio11.play();
-  } , 0);
+// window.addEventListener("load", () => {
+//   setTimeout(()=> {
+//     let audio1 = new Audio(importaudio1);
+//     let audio11 = new Audio(importaudio11);
+//     audio1.play();
+//     audio11.play();
+//   } , 0);
 
-  setTimeout(()=> {
-    let audio2 = new Audio(importaudio5);
-    //let audio3 = new Audio();
-    let audio11 = new Audio(importaudio11);
-    let audio7 = new Audio(importaudio7);
-    audio2.play();
-    //audio3.play();
-    audio11.play();
-    audio7.play();
-  } , 1700);
-
-  
-
-  let countPath = 0;
-
-  setTimeout(()=> {
-    let elemLogoPath = document.querySelectorAll(".logo-path-copy");
-    let elemPath = document.querySelectorAll(".makePathCopy");
-    let elemTopPath = document.querySelectorAll(".makePathTopCopy");
-    let elemTopBootm = document.querySelectorAll(".makePathBootmCopy");
-    let elemTopLeft = document.querySelectorAll(".makePathLeftCopy");
-    let elemTopRight = document.querySelectorAll(".makePathRightCopy");
-    let audio14 = new Audio(importaudio14);
-    let audio8 = new Audio(importaudio8);
-    let audio15 = new Audio(importaudio15);
-    let audio16 = new Audio(importaudio16);
-    console.log("is this working or not");
-    var x = setInterval(() => {
-      //  audio15.play();
-       audio16.play();
-    },800);
-
-    setTimeout(() => {
-      audio8.play()
-    }, 7000)
-    // countPath++;
-    audio14.playbackRate = 0.6;
-    audio14.play();
-    setTimeout(()=> {
-      // elemPath.style.animationName = "xyz" + countPath;
-      audio14.playbackRate = 1;
-      clearInterval(x);
-      elemLogoPath.forEach(
-        function(x) {
-          x.style.animation = "none";
-      });
-      elemPath.forEach(
-        function(x) {
-          // x.classList.remove("makePathCopy");
-          x.style.animation = "none";
-      });
-      elemTopPath.forEach(
-        function(x) {
-          // x.classList.remove("makePathTopCopy");
-          x.style.animation = "none";
-      });
-      elemTopRight.forEach(
-        function(x) {
-          x.style.animation = "none";
-          // x.classList.remove("makePathRightCopy");
-      });
-      elemTopBootm.forEach(
-        function(x) {
-          x.style.animation = "none";
-          // x.classList.remove("makePathBootmCopy");
-      });
-      elemTopLeft.forEach(
-        function(x) {
-          x.style.animation = "none";
-          // x.classList.remove("makePathLeftCopy");
-      });
-
-    }, 8300);
-  } , 3000);
+//   setTimeout(()=> {
+//     let audio2 = new Audio(importaudio5);
+//     //let audio3 = new Audio();
+//     let audio11 = new Audio(importaudio11);
+//     let audio7 = new Audio(importaudio7);
+//     audio2.play();
+//     //audio3.play();
+//     audio11.play();
+//     audio7.play();
+//   } , 1700);
 
   
 
+//   let countPath = 0;
+
+//   setTimeout(()=> {
+//     let elemLogoPath = document.querySelectorAll(".logo-path-copy");
+//     let elemPath = document.querySelectorAll(".makePathCopy");
+//     let elemTopPath = document.querySelectorAll(".makePathTopCopy");
+//     let elemTopBootm = document.querySelectorAll(".makePathBootmCopy");
+//     let elemTopLeft = document.querySelectorAll(".makePathLeftCopy");
+//     let elemTopRight = document.querySelectorAll(".makePathRightCopy");
+//     let audio14 = new Audio(importaudio14);
+//     let audio8 = new Audio(importaudio8);
+//     let audio15 = new Audio(importaudio15);
+//     let audio16 = new Audio(importaudio16);
+//     console.log("is this working or not");
+//     var x = setInterval(() => {
+//       //  audio15.play();
+//        audio16.play();
+//     },800);
+
+//     setTimeout(() => {
+//       audio8.play()
+//     }, 7000)
+//     // countPath++;
+//     audio14.playbackRate = 0.6;
+//     audio14.play();
+//     setTimeout(()=> {
+//       // elemPath.style.animationName = "xyz" + countPath;
+//       audio14.playbackRate = 1;
+//       clearInterval(x);
+//       elemLogoPath.forEach(
+//         function(x) {
+//           x.style.animation = "none";
+//       });
+//       elemPath.forEach(
+//         function(x) {
+//           // x.classList.remove("makePathCopy");
+//           x.style.animation = "none";
+//       });
+//       elemTopPath.forEach(
+//         function(x) {
+//           // x.classList.remove("makePathTopCopy");
+//           x.style.animation = "none";
+//       });
+//       elemTopRight.forEach(
+//         function(x) {
+//           x.style.animation = "none";
+//           // x.classList.remove("makePathRightCopy");
+//       });
+//       elemTopBootm.forEach(
+//         function(x) {
+//           x.style.animation = "none";
+//           // x.classList.remove("makePathBootmCopy");
+//       });
+//       elemTopLeft.forEach(
+//         function(x) {
+//           x.style.animation = "none";
+//           // x.classList.remove("makePathLeftCopy");
+//       });
+
+//     }, 8300);
+//   } , 3000);
+
+  
 
 
-});
 
-document.getElementsByClassName("logo-text")[0].addEventListener("mouseenter", function() {
-  let elemText = document.querySelectorAll("[id^='logo-']");
-  let audio1 = new Audio(importaudio11);
-  audio1.play();
-  this.style.cursor = "pointer";
+// });
 
-  let x = 0;
+// document.getElementsByClassName("logo-text")[0].addEventListener("mouseenter", function() {
+//   let elemText = document.querySelectorAll("[id^='logo-']");
+//   let audio1 = new Audio(importaudio11);
+//   audio1.play();
+//   this.style.cursor = "pointer";
 
-  elemText.forEach(
-    function(elem) {
-      if(elem.style.animationName  == "tZero") {
-        elem.style.animation = "tLogo 1s linear " + x + "s" + " forwards";
-        x = x + 0.05;
-      }
-      else {
-        elem.style.animation = "tZero 1s linear " + x + "s" + " forwards";
-        x = x + 0.05;
-      }      
-    }
-  );
-  x = 0;
+//   let x = 0;
 
-});
+//   elemText.forEach(
+//     function(elem) {
+//       if(elem.style.animationName  == "tZero") {
+//         elem.style.animation = "tLogo 1s linear " + x + "s" + " forwards";
+//         x = x + 0.05;
+//       }
+//       else {
+//         elem.style.animation = "tZero 1s linear " + x + "s" + " forwards";
+//         x = x + 0.05;
+//       }      
+//     }
+//   );
+//   x = 0;
+
+// });
 
 
 //console.log("this file is execution... coede... ");

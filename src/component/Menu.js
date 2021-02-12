@@ -7,7 +7,8 @@ class Menu extends Component {
         super(props);
 
         this.state = {
-            logo: "./asset/image/codersLodge.svg"
+            logoImg: "",
+            LogoText: ""
         }
     }
 

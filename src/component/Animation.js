@@ -1,21 +1,12 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
+import Line from "./Line.js";
+import Points from "./Point";
 import importaudio1 from '../asset/audio/dl/1.mp3';
-import importaudio2 from '../asset/audio/dl/2.mp3';
-import importaudio3 from '../asset/audio/dl/3.mp3';
-import importaudio4 from '../asset/audio/dl/4.mp3';
 import importaudio5 from '../asset/audio/dl/5.mp3';
-import importaudio6 from '../asset/audio/dl/6.mp3';
 import importaudio7 from '../asset/audio/dl/7.mp3';
-import importaudio8 from '../asset/audio/dl/8.mp3';
-import importaudio9 from '../asset/audio/dl/9.mp3';
-import importaudio10 from '../asset/audio/dl/10.mp3';
 import importaudio11 from '../asset/audio/dl/11.mp3';
-import importaudio12 from '../asset/audio/dl/12.mp3';
-import importaudio13 from '../asset/audio/dl/13.mp3';
-import importaudio14 from '../asset/audio/dl/14.mp3';
-import importaudio15 from '../asset/audio/dl/15.mp3';
-import importaudio16 from '../asset/audio/dl/16.mp3';
+
 
 
 
@@ -27,43 +18,29 @@ class Animation extends Component {
 
         this.state = {
             winX: window.innerWidth,
-            winY: window.innerHeight
+            winY: window.innerHeight,
+            pointTopX: [Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth)],
+            pointTopY: [Math.floor(Math.random() * 200),Math.floor(Math.random() * 200),Math.floor(Math.random() * 200),Math.floor(Math.random() * 200),Math.floor(Math.random() * 200)],
+            pointBottomX: [Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth)],
+            pointBottomY: [window.innerHeight - Math.floor(Math.random() * 200),window.innerHeight - Math.floor(Math.random() * 200),window.innerHeight - Math.floor(Math.random() * 200),window.innerHeight - Math.floor(Math.random() * 200),window.innerHeight - Math.floor(Math.random() * 200)],
+            pointLeftX: [Math.floor(Math.random() * 200),Math.floor(Math.random() * 200),Math.floor(Math.random() * 200)],
+            pointLeftY: [Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth)],
+            pointRightX: [window.innerWidth - Math.floor(Math.random() * 200),window.innerWidth - Math.floor(Math.random() * 200),window.innerWidth - Math.floor(Math.random() * 200)],
+            pointRightY: [Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth),Math.floor(Math.random() * window.innerWidth)]
         }
     }
+
+
 
     
 
     render() {
         const color0 = "#5A6351"; // #5A6351 make change the color code
-        const color6 = "#0ed4e3";
-
-        const lineY = []; 
-        const lineX = [];
-        const circleCodX = [];
-        const circleCodY = [];
-        const moveX = []; // move some distance into x direction
-        const pathD = [];
-        var circleLeftCodX = []; 
-        var circleLeftCodY = [];
-        var circleTopCodX = [];
-        var circleTopCodY = [];
-        var circleBottomCodX = [];
-        var circleBottomCodY = [];
-        var circleRightCodX = [];
-        var circleRightCodY = []; 
 
         const winX = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const winY = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-        ["load", "resize"].forEach(elem => {
-            window.addEventListener(elem, () => {
-                this.setState({
-                    winX: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-                    winY: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-                })
-                
-            });
-        });
+        
 
         window.addEventListener("load", () => {
             setTimeout(()=> {
@@ -159,7 +136,7 @@ class Animation extends Component {
             let x = 0;
           
             elemText.forEach((elem) => {
-                  elem.style.animation = "tLogo 1s linear " + x + "s" + " forwards";
+                  elem.style.animation = "tLogo 1.5s linear " + x + "s" + " forwards";
                   x = x + 0.05;
               }
             );
@@ -169,180 +146,55 @@ class Animation extends Component {
         document.getElementById("logo-text").addEventListener("mouseleave", function() { 
             let elemText = document.querySelectorAll("[class*='logo-t-']");
             elemText.forEach((elem) => {
-                setTimeout(()=> { elem.style.animation = "none"; } , 1200);
+                setTimeout(()=> { elem.style.animation = "none"; } , 1600);
             })
         })
 
-    
 
-
-
-        //geting the coordinate for line 'lineX' and 'lineY' and push into the array
-
-        for(let i=0, y=0; i < winY; i = i + 20, y++) {
-            lineY[y] = i;
-        }
-    
-        for(let i=0, y=0; i < winX; i = i + 20, y++) {
-            lineX[y] = i;
-        }
-
-        // for each array element we have one line called path 
-
-        const lineHori = lineY.map((x,y) => {
-            return(
-                <path key={y} className={ "line" + Math.floor(Math.random() * 10) } fill={"none"} stroke={color6} strokeWidth={0.5} strokeOpacity={0.1} d={"M" + 0 + " " + x + "L" + this.state.winX + " " + x} />
-            );
-        });
-
-        const lineVert = lineX.map((x,y) => {
-            return(
-                <path key={y} className={ "line" + Math.floor(Math.random() * 10) } fill={"none"} stroke={color6} strokeWidth={0.5} strokeOpacity={0.1} d={"M" + x + " " + 0 + "L" + x + " " + this.state.winY} />
-            );
-        });
-
-        // random circle on screen 
-
-        for(let i = 0; i < 30; i++) {
-            circleCodX[i] = Math.floor(Math.random() * winX); 
-            circleCodY[i] = Math.floor(Math.random() * winY); 
-        }
-
-        circleCodY.sort((a, b) => a - b); // sorting the arrary of 'cordY' in ascending order
         
-        const makeCircle = circleCodX.map((x,y) => { //plotting the circle point on the screen
-            return(
-                <circle key={y}  className={"makeCircle"} cx={x} cy={circleCodY[y]} r={3 + "px"} fill={color0}/>
-            );
-        });
-
-
-        for(let i = 0, j = 1 ; i < 30; i++ , j++ ) {
-            if(circleCodX[i] < circleCodX[j]) {
-                moveX[i] = circleCodX[i] + Math.random() * Math.abs((circleCodX[i] - circleCodX[j]));
-                pathD[i] = `M${circleCodX[i]} ${circleCodY[i]} H${moveX[i]}L${moveX[i] + Math.abs(circleCodY[i] - circleCodY[j])} ${circleCodY[j]} L${circleCodX[j]} ${circleCodY[j]}`;
+        const pointTLBR = this.state.pointTopX.map((x,y) => {
+            if(y<3) {
+                return(
+                    <g key={y}>
+                        <path className={"makePath"} d={`M ${x} -40 V ${this.state.pointTopY[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
+                        <path className={"makePathCopy"} d={`M ${x} -40 V ${this.state.pointTopY[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
+                        <path className={"makePath"} d={`M ${this.state.pointBottomX[y]} ${this.state.pointBottomY[y]} V ${this.state.winY + 40}`} fill={"none"} stroke={color0} strokeWidth={1} />
+                        <path className={"makePathCopy"} d={`M ${this.state.pointBottomX[y]} ${this.state.pointBottomY[y]} V ${this.state.winY + 40}`} fill={"none"} stroke={color0} strokeWidth={1} />
+                        <path className={"makePath"} d={`M -40 ${this.state.pointLeftY[y]} H ${this.state.pointLeftX[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
+                        <path className={"makePathCopy"} d={`M -40 ${this.state.pointLeftY[y]} H ${this.state.pointLeftX[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
+                        <path className={"makePath"} d={`M ${this.state.winX * 3 } ${this.state.pointRightY[y]} H ${this.state.pointRightX[y]}`} fill={"none"} stroke={color0} strokeWidth={1} />
+                        <path className={"makePathCopy"} d={`M ${this.state.winX + 40} ${this.state.pointRightY[y]} H ${this.state.pointRightX[y]}`} fill={"none"} stroke={color0} strokeWidth={1} />
+                        <circle className={"makeCircle"} cx={this.state.pointTopX[y]} cy={this.state.pointTopY[y]} r={3 + "px"} fill={color0} />
+                        <circle className={"makeCircle"} cx={this.state.pointBottomX[y]} cy={this.state.pointBottomY[y]} r={3 + "px"} fill={color0} />
+                        <circle className={"makeCircle"} cx={this.state.pointLeftX[y]} cy={this.state.pointLeftY[y]} r={3 + "px"} fill={color0} />
+                        <circle className={"makeCircle"} cx={this.state.pointRightX[y]} cy={this.state.pointRightY[y]} r={3 + "px"} fill={color0} />
+                    </g>
+                );
             }
             else {
-                moveX[i] = circleCodX[i] - Math.random() * Math.abs(circleCodX[i] - circleCodX[j]);
-                pathD[i] =  `M${circleCodX[i]} ${circleCodY[i]} H${moveX[i]}L${moveX[i] - Math.abs(circleCodY[i] - circleCodY[j])} ${circleCodY[j]} L${circleCodX[j]} ${circleCodY[j]}`;
+                return(
+                    <g key={y}>
+                        <path className={"makePath"} d={`M ${x} -40 V ${this.state.pointTopY[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
+                        <path className={"makePathCopy"} d={`M ${x} -40 V ${this.state.pointTopY[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
+                        <path className={"makePath"} d={`M ${this.state.pointBottomX[y]} ${this.state.pointBottomY[y]} V ${this.state.winY + 40}`} fill={"none"} stroke={color0} strokeWidth={1} />
+                        <path className={"makePathCopy"} d={`M ${this.state.pointBottomX[y]} ${this.state.pointBottomY[y]} V ${this.state.winY + 40}`} fill={"none"} stroke={color0} strokeWidth={1} />
+                        <circle className={"makeCircle"} cx={this.state.pointTopX[y]} cy={this.state.pointTopY[y]} r={3 + "px"} fill={color0} />
+                        <circle className={"makeCircle"} cx={this.state.pointBottomX[y]} cy={this.state.pointBottomY[y]} r={3 + "px"} fill={color0} />
+                    </g>
+                );
             }
-            i++;
-            j++;
-        }
-
-        const path = pathD.filter((x) => {
-            if(x != undefined) {
-                return x;
-            }
         });
 
-
-        const makePath = path.map((x,y) => {
-            return(
-                <g key={y}>
-                    <path className={"makePath"} d={x} stroke={color0} fill={"none"} strokeWidth={1}/>
-                    <path className={"makePathCopy"} d={x} stroke={color0} fill={"none"} strokeWidth={1}/>
-                </g>
-            );
-        });
-
-
-        for(let i = 0 ; i < 5; i++) { // making the random point for circle from top and bottom 
-            circleTopCodX[i] =  Math.floor(Math.random() * winX);
-            circleTopCodY[i] = Math.floor(Math.random() * 200);
-            circleBottomCodX[i] =  Math.floor(Math.random() * winX);
-            circleBottomCodY[i] = winY - Math.floor(Math.random() * 200);
-        }
-        
-        for(let i = 0 ; i < 3; i++) { // making the random point for circle from left and right 
-            circleLeftCodX[i] =  Math.floor(Math.random() * 200);
-            circleLeftCodY[i] = Math.floor(Math.random() * winY);
-            circleRightCodX[i] = winX - Math.floor(Math.random() * 200);
-            circleRightCodY[i] = Math.floor(Math.random() * winY);
-        }
-        
-        const makeCircleTB = circleTopCodX.map((x,y) => {
-            return(
-                <g key={y}>
-                    <circle className={"makeCircle"} cx={circleTopCodX[y]} cy={circleTopCodY[y]} r={3 + "px"} fill={color0} />
-                    <circle className={"makeCircle"} cx={circleBottomCodX[y]} cy={circleBottomCodY[y]} r={3 + "px"} fill={color0} />
-                </g>
-            );
-        });
-
-        const makeCircleLR = circleLeftCodX.map((x,y) => {
-            return(
-                <g key={y}>
-                    <circle className={"makeCircle"} cx={circleLeftCodX[y]} cy={circleLeftCodY[y]} r={3 + "px"} fill={color0} />
-                    <circle className={"makeCircle"} cx={circleRightCodX[y]} cy={circleRightCodY[y]} r={3 + "px"} fill={color0} />
-                </g>
-            );
-        });
-
-
-        const makePathTB = makeCircleTB.map((x,y) => {
-            return(
-                <g key={y}>
-                    <path className={"makePath"} d={`M ${circleTopCodX[y]} -40 V ${circleTopCodY[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
-                    <path className={"makePathCopy"} d={`M ${circleTopCodX[y]} -40 V ${circleTopCodY[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
-                    <path className={"makePath"} d={`M ${circleBottomCodX[y]} ${circleBottomCodY[y]} V ${winY + 40}`} fill={"none"} stroke={color0} strokeWidth={1} />
-                    <path className={"makePathCopy"} d={`M ${circleBottomCodX[y]} ${circleBottomCodY[y]} V ${winY + 40}`} fill={"none"} stroke={color0} strokeWidth={1}/>
-                </g> 
-            );
-        });
-
-        const makePathLR = makeCircleLR.map((x,y) => {
-            return(
-                <g key={y}>
-                    <path className={"makePath"} d={`M -40 ${circleLeftCodY[y]} H ${circleLeftCodX[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
-                    <path className={"makePathCopy"} d={`M -40 ${circleLeftCodY[y]} H ${circleLeftCodX[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
-                    <path className={"makePath"} d={`M ${winX + 40} ${circleRightCodY[y]} H ${circleRightCodX[y]}`} fill={"none"} stroke={color0} strokeWidth={1} />
-                    <path className={"makePathCopy"} d={`M ${winX + 40}  ${circleRightCodY[y]} H ${circleRightCodX[y]}`} fill={"none"} stroke={color0} strokeWidth={1}/>
-                </g> 
-            );
-        });
-       
-
-       
-
-        
-
-        
-
-        
-      
         return(
-            <svg viewBox={"0 0 " + this.state.winX + " " + this.state.winY}>
-                <g>
-                    {lineHori}
-                </g>
-                <g>
-                    {lineVert}
-                </g>
-                <g>
-                    {makePath}
-                </g>
-                <g>
-                    {makeCircle}
-                </g>
-                <g>
-                    {makePathTB}
-                </g>
-                <g>
-                    {makePathLR}
-                </g>
-                <g>
-                    {makeCircleTB}
-                </g>
-                <g>
-                    {makeCircleLR}
-                </g>
-            </svg>
+            <g>
+                <Line />
+                {<Points />}
+                {pointTLBR}
+            </g>
         );
     }
 }
 
 export default Animation;
-
 
 ReactDOM.render(<Animation />, document.getElementById("bg-animation"));
