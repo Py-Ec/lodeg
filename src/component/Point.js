@@ -66,8 +66,6 @@ class Points extends Component {
         let pathD;
         const color0 = "#5A6351"; 
 
-        console.log(this.state.pointY);
-
         const point = this.state.pointX.map((x,y) => {
 
             if(i < this.state.pointX.length - 1) {

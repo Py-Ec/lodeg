@@ -21,6 +21,12 @@
     left: 0;
 }
 
+@mixin  position($position, $top, $left)  {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
 @mixin bg-gradient {
     background-image: linear-gradient(to left , $bgcolor1 , $bgcolor2  , $bgcolor3 ,  $bgcolor4);
 }
@@ -36,9 +42,9 @@
     align-items: center;
 }
 
-@mixin logo-drop-shadow {
-    -webkit-filter: drop-shadow( 0px 0px 100px #41e9e099 );
-    filter: drop-shadow( 0px 0px 100px #41e9e099 );
+@mixin logo-drop-shadow($blur: 100px) {
+    -webkit-filter: drop-shadow( 0px 0px $blur #41e9e099 );
+    filter: drop-shadow( 0px 0px $blur #41e9e099 );
 }
 
 @mixin center-absolute($top: 50%, $left: 50%, $x: -50%, $y: -50%) {
@@ -47,3 +53,17 @@
     left: $left;
     transform: translate($x, $y);
 } 
+
+@mixin list-reset {
+    list-style-type: none;
+    @include zero-space;
+}
+
+@mixin anchor {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0px 25px;
+    cursor: pointer;
+}
