@@ -102,16 +102,16 @@ body {
                     @include anchor;
                     height: $nav-height;
                     line-height: $nav-height;
-                    width: 100%;
+                    width: auto;
                     color: $colorWhite;
                     font-size: 20px; 
                     transition: 0.5s;
                 }
 
-                a:hover, .nav-item-list:hover {
-                    @include logo-drop-shadow(10px);
+                .social-icon:hover , .nav-item-list:hover {
                     color: $color12;
-                    font-size: 23px;
+                    @include logo-drop-shadow(10px);
+                    font-size: 21px;
                 }
             }
 
@@ -134,6 +134,7 @@ body {
                     background-size: 550% 550%;
                     background-repeat: no-repeat;
                 }
+
                 .icon-Facebook {
                     background-position: -8px -133px; // -12 -6 || -8 -133 is gray
                     // border: 1px solid orchid;
@@ -212,34 +213,31 @@ body {
             overflow: hidden;
             display: block;
 
-            
-
             ul {
                 flex-direction: row;
                 justify-content: flex-end;
                 height: inherit;
-                // flex-wrap: wrap;
                 overflow: hidden;
 
                 a {
-                    width: auto !important;
+                    filter: none !important;
                 }
 
                 a::after {
                     bottom: 20px;
-                    content: " ";
+                    content: "";
                     display: block;
                     position: relative;
                     width: 0;
                     -webkit-transition: width 0.5s ease-in-out;
-                    transition: width 280ms ease-in-out;
+                    transition: all 0.5s ease-in-out;
                 }
                 a:hover:after {
+                    content: "";
                     border: 1px solid $colorWhite;
-                    display: block;
                     width: 100%;
                     -webkit-transition: width 0.5s ease-in-out;
-                    transition: width 350ms ease-in-out;
+                    transition: all 0.5s ease-in-out;
                 }
             }
         }

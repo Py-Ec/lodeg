@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import ReactDom from "react-dom";
 import './asset/scss/main.scss';
-// import './asset/js/main.js';
-import ReactDOM from 'react-dom';
-import Menu from './component/Menu.js';
-import Animation from "./component/Animation.js";
-import Logo from "./component/Logo.js";
-
-
-
+import App from "./component/App";
 
 class Main extends Component {
     render() {
         return(
             <div>
-               <Menu /> 
+               <App /> 
             </div>
         );
     }
@@ -22,4 +15,4 @@ class Main extends Component {
 
 export default Main;
 
-ReactDom.render(<Menu /> , document.getElementById("nav-header"));
+ReactDom.render(<App /> , document.getElementById("main"));

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import LogoImg from "../asset/image/codersLodge.svg";
 import LogoText from "../asset/image/codersLodge-name.svg";
-import socialImg from "../asset/image/social.svg";
-import { contextType } from 'react-fontawesome';
-
 
 
 

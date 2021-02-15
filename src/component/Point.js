@@ -97,9 +97,9 @@ class Points extends Component {
 
 
         return(
-            <g>
+            <>
                 {point}
-            </g>
+            </>
         );
     }
 
