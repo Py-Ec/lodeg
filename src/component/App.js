@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Animation from './Animation';
+import Section from './Section';
 import Menu from "./Menu";
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
     render() {
         return(
             <div className={"main"} >
-                <div class={"Animation"}>
+                <div className={"Animation"}>
                     <Animation />
                 </div>
                 <header id="nav-header">

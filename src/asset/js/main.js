@@ -402,3 +402,18 @@ function randCircle() {
 
 
 //console.log("this file is execution... coede... ");
+
+
+// window.addEventListener("load", () => {
+//   document.addEventListener('mousemove', (event) => {
+//     const elem = document.getElementById("moving-cursor");
+//       elem.style.left = event.clientX + "px";
+//       elem.style.top = event.clientY + "px";
+//   })
+// });
+
+
+
+
+// creating new javaScript testing 
+

@@ -32,11 +32,34 @@ class Logo extends Component {
             );
         });
 
+        const LogoTextZero = this.props.logoTextZero.map((x) => {
+            return(
+                <tspan key={x.id} className={x.class} dx={x.dx} dy={x.dy} fill={x.fill} style={x.style}>{x.name}</tspan>
+            );
+        })
+
+        const styleZeroText = {
+            fontFamily: "Arial, Helvetica, sansSerif",
+             fontSize: "8px", 
+        }
+
+        const LogoText = this.props.logoText.map((x) => {
+            return(
+                <tspan key={x.id} className={x.class} dx={x.dx} dy={x.dy} fill={x.fill} style={x.style}>{x.name}</tspan>
+            );
+        })
+
         return(
           <g>
               {LogoOuter}
               {LogoPath}
               {LogoCircle}
+              <text id={"Zero-text"} x={"25"} y={"84.8"} style={styleZeroText}>
+                  {LogoTextZero}
+              </text>
+              <text id={"logo-text"} x={"25"} y={"84.8"} style={styleZeroText}>
+                  {LogoText}
+              </text>
           </g>
         );
     }

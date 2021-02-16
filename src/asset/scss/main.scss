@@ -15,6 +15,19 @@ body {
     @include zero-space;
     background-color: $bgdarkcolor;
     margin-bottom: 2000px; // this is only for scrolling testing 
+    overflow: hidden;
+}
+
+#main {
+    @include full-size;
+    overflow: hidden;
+
+    .main{
+        #section {
+            @include full-size;
+            overflow: hidden;
+        }
+    }
 }
 
 #nav-header {
@@ -329,6 +342,48 @@ body {
 
             .nav-item {
                 width: 120%;
+            }
+
+            .nav-item-icon {
+                overflow: visible;
+                ul {
+                    a {
+                        z-index: 2;
+                    }
+                    a::after {
+                        content: "";
+                        display: inline-block;
+                        position: relative;
+                        left: -1000%;
+                        bottom: 100%;
+                        width: 150px;
+                        height: 60px;
+                        background-color: $color14;
+                        margin-top:  25px;
+                        border-radius: 2em 1em 4em / 0.5em 3em;
+                        transition: left ease 0.5s;
+                        z-index: 1;
+                        font-family: cursive;
+                    }
+                    .icon-home::after {
+                        content: "HOME";
+                    }
+                    .icon-services::after {
+                        content: "SERVICES";
+                    }
+                    .icon-contact::after {
+                        content: "CONTACT";
+                    }
+                    .icon-about::after {
+                        content: "ABOUT";
+                    }
+                    .icon-profile::after {
+                        content: "PROFILE";
+                    }
+                    a:hover:after {
+                        left: 200%;
+                    }
+                }
             }
         }
     }

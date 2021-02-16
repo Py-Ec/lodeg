@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LogoImg from "../asset/image/codersLodge.svg";
 import LogoText from "../asset/image/codersLodge-name.svg";
-
+import Logo from './Logo';
 
 
 
@@ -112,7 +112,7 @@ class Menu extends Component {
         const icon = this.state.menuItem.map((x) => {
             
             return(
-                <a key={x.id} className={"nav-item-list"} href={x.href} title={x.title}>
+                <a key={x.id} className={`nav-item-list icon-${x.item.toLocaleLowerCase()}`} href={x.href} title={x.title}>
                     <span className={x.icon}></span>
                 </a>
             );
