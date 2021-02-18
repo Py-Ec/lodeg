@@ -1,23 +1,20 @@
 import React, { Component } from "react";
 import Animation from './Animation';
-import Section from './Section';
+import HeaderComponent from './Header';
+import FooterComponent from './Footer';
 import Menu from "./Menu";
 
-class App extends Component {
-
-
-    render() {
-        return(
-            <div className={"main"} >
-                <div className={"Animation"}>
-                    <Animation />
-                </div>
-                <header id="nav-header">
-                    <Menu />
-                </header>
-            </div>
-        );
-    }
+function App() {
+    return(
+        <>
+            <Animation />
+            <header id="nav-header">
+                <Menu />
+            </header>
+            <HeaderComponent />
+            <FooterComponent />
+        </>
+    );
 }
 
 

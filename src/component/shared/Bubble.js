@@ -44,8 +44,8 @@ class Bubble extends Component {
     render() {
 
         return(
-            <section id={"bubble"}>
-            </section>
+            <div id={"bubble"}>
+            </div>
         ); 
     }
 }

@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import LogoImg from "../asset/image/codersLodge.svg";
-import LogoText from "../asset/image/codersLodge-name.svg";
-import Logo from './Logo';
+// import LogoImg from "../asset/image/codersLodge.svg";
+// import LogoText from "../asset/image/codersLodge-name.svg";
+import Logo from './shared/Logo';
+import MenuItem from './shared/MenuItem';
+import Social from './shared/Social';
 
+// importing logo state 
+import LogoOuter from './shared/Logo/LogoOuter';
+import LogoPath from './shared/Logo/LogoPath';
+import LogoCircle from './shared/Logo/LogoCircle';
+import LogoTextZero from './shared/Logo/LogoTextZero';
+import LogoText from './shared/Logo/LogoText';
 
 
 
@@ -12,71 +20,26 @@ class Menu extends Component {
         super(props);
 
         this.state = {
-            menuItem: [
-                {
-                    id: 0,
-                    item: "HOME",
-                    href: "#",
-                    title: "Coders Lodge",
-                    icon: "fas fa-home"
-                },
-                {
-                    id: 1,
-                    item: "SERVICES",
-                    href: "#",
-                    title: "Services",
-                    icon: "fas fa-globe"
-                },
-                {
-                    id: 2,
-                    item: "CONTACT",
-                    href: "#",
-                    title: "Contact",
-                    icon: "fas fa-envelope"
-                },
-                {
-                    id: 3,
-                    item: "ABOUT",
-                    href: "#",
-                    title: "About",
-                    icon: "fas fa-address-card"
-                },
-                {
-                    id: 4,
-                    item: "PROFILE",
-                    href: "#",
-                    title: "Profile",
-                    icon: "fas fa-user"
-                }
-            ],
+            menuItem: MenuItem,
+            social: Social,
+            status : false,
 
-            social: [
-                {
-                    id: 0,
-                    name: "Facebook",
-                    href: "#"
-                },
-                {
-                    id: 1,
-                    name: "Instagram",
-                    href: "#"
-                },
-                {
-                    id: 2,
-                    name: "Twitter",
-                    href: "#"
-                },
-                {
-                    id: 3,
-                    name: "Linkedin",
-                    href: "#"
-                }
-            ],
-
-            status : false
+            // logo state items
+            logoOuter: LogoOuter,
+            logoPath:  LogoPath,
+            logoCircle : LogoCircle,
+            logoTextZero : LogoTextZero,
+            logoText : LogoText,
+            viewBox: "0 5 330 75",
+            LogoZeroX: "80",
+            LogoZeroY: "50",
+            LogoTextX: "80",
+            LogoTextY: "50"
         }
+
         this.menuFunction = this.menuFunction.bind(this);
     }
+
 
     menuFunction() {
         this.setState({
@@ -84,7 +47,7 @@ class Menu extends Component {
         });
     }
 
-    CheckW1024() {
+    CheckW1024() { // checking the width of the screen is 1024 or more...
         if(window.innerWidth >= 1024) {
             let elemsub = this.state.menuItem.map((x) => {
                 return(
@@ -128,18 +91,19 @@ class Menu extends Component {
 
         const MenuStatus = this.state.status ? 'show-nav-item' : 'hide-nav-item';
 
-      
-
         return(
             <nav className={`nav ${MenuStatus}`}>
                 <div className={`menu-btn`} title={"Menu"} onClick={this.menuFunction}>
-                    <div className={"menu-bar-1"}></div>
-                    <div className={"menu-bar-2"}></div>
-                    <div className={"menu-bar-3"}></div>
+                        <div className={"menu-bar-1"}></div>
+                        <div className={"menu-bar-2"}></div>
+                        <div className={"menu-bar-3"}></div>
                 </div>
                 <div className={"nav-logo"} title={"Coders Lodge"}>
-                    <img className={"logo-img"} src={LogoImg} />
-                    <img className={"logo-text"} src={LogoText} />
+                    {/* <img className={"logo-img"} src={LogoImg} />
+                    <img className={"logo-text"} src={LogoText} /> */}
+                    <div className={"logo-img"}>
+                        <Logo logoOuter={this.state.logoOuter} logoPath={this.state.logoPath} logoPoint={this.state.logoCircle} logoTextZero={this.state.logoTextZero} logoText={this.state.logoText} viewBox={this.state.viewBox} LogoZeroX={this.state.LogoTextX} LogoZeroY={this.state.LogoTextY} LogoTextX={this.state.LogoTextX} LogoTextY={this.state.LogoTextY}  />
+                    </div>
                 </div>
                 <>
                     {this.CheckW1024()}

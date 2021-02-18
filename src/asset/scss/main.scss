@@ -15,32 +15,26 @@ body {
     @include zero-space;
     background-color: $bgdarkcolor;
     margin-bottom: 2000px; // this is only for scrolling testing 
-    overflow: hidden;
 }
 
 #main {
-    @include full-size;
-    overflow: hidden;
-
-    .main{
-        #section {
-            @include full-size;
-            overflow: hidden;
-        }
-    }
+    display: grid;
+    grid-template-columns: auto; // 10vh for menu button and auto for logo and logo text 
+    overflow-x: hidden;
+    width: 100%;
 }
 
 #nav-header {
     .nav{
-        @include full-size(100%, $nav-height); 
+        @include full-size(100%, auto); 
         @include zero-position(relative); 
-        @include logo-drop-shadow;
+        @include logo-drop-shadow(10px);
+        display: grid;
+        grid-template-columns: $nav-height auto;
         
         background-color: $color14; //new color #009688
         z-index: 100;
         opacity: 0.9;
-        display: grid;
-        grid-template-columns: $nav-height auto; // 10vh for menu button and auto for logo and logo text 
         overflow: hidden;
         transition: height 0.5s;
 
@@ -76,18 +70,29 @@ body {
             justify-content: center;
             align-items: center;
             height: inherit;
+            overflow: hidden;
 
 
             .logo-img {
-                width: 85px;
+                width: 100%;
                 height: $nav-height;
-                margin-left: -18px;
-            }
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                cursor: pointer;
+                svg {
+                    width: 300px;
+                    height: 100px;
 
-            .logo-text {
-                width: 200px;
-                height: $nav-height;
-                margin-left: -18px;
+                    #Zero-text, #logo-text {
+                        font-size: 22px !important;
+
+                        tspan {
+                            font-size: 21px !important;
+                        }
+                    }
+                }
             }
         }
 
@@ -297,6 +302,102 @@ body {
     }
 }
 
+
+.Header-section {
+    @include full-size(100%, 90vh);
+    position: relative;
+    color: $colorWhite;
+    z-index: 2;
+    padding: 20px 55px;
+
+    .slide-container {
+        position: relative;
+        width: 100%;
+        
+
+        .slides {
+            position: relative;
+            height: 70vh;
+            padding: 10px 10px 0 10px;
+            background-color: $color14;
+            // @include logo-drop-shadow(6px);
+            opacity: 0.9;
+            border-radius: 50% / 14px;
+            border: 0.9px solid seagreen;
+            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.05),
+                        inset -3px -3px 6px rgba(255,255,255,0.5),
+                              3px 3px 6px rgba(0,0,0,0.05),
+                              -3px -3px 6px rgba(255,255,255,0.5);
+            
+            .slide-item {
+                @include logo-drop-shadow(1px);
+                text-align: center;
+
+                .card-img{
+                    margin-top: 8px;
+                }
+
+                .card-text {
+                    padding: 0px 10px;
+                    font-family: 'poppins', sans-serif;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    margin-top: -12px;
+
+                    // h4 {
+                    //     text-align: center;
+                    //     font-size: 20px;
+                    // }
+                }
+                a {
+                    padding: 8px 20px;
+                    display: inline-block;
+                    background-color: seagreen;
+                    margin-top: 15px;
+                    border-radius: 20px;
+                    color: $colorWhite;
+                    // background-color: $color14;
+                    text-decoration: none;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .dot-container {
+        width: calc(100% - 2*55px);
+        position: absolute;
+        bottom: 12vh;
+        text-align: center;
+        
+
+    .dot {
+        @include logo-drop-shadow(2px);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: $colorWhite;
+        opacity: 0.9;
+        border: 0.4px solid #222;
+        margin-right: 3px;
+    }
+
+    .dot:after {
+        content: '';
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        transform: scale(0.25) translate(20% 20%);
+        background: radial-gradient(#000, transparent);
+        border-radius: 50%;
+        }
+    }
+
+}
+
 @media only screen and (min-width: 600px) {
     .bg-svg{
         .svg-logo {  
@@ -317,6 +418,7 @@ body {
         .nav{ 
             overflow: visible;
             position: fixed;
+            height: 75px;
 
             .nav-item-icon {
                 display: block;
@@ -339,6 +441,7 @@ body {
     #nav-header {
         .nav {
             grid-template-columns: $nav-height 280px auto;
+            height: 75px;
 
             .nav-item {
                 width: 120%;

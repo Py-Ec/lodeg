@@ -1,0 +1,459 @@
+@import "globals";
+@import "mixin";
+
+// svg-logo 'svg' tag is made by using html and sass
+// .svg-logo {
+//     @include full-size();
+//     @include center;
+//     @include logo-drop-shadow;
+//     z-index: 2;
+// }
+
+
+[class^="circle-ani-"] {
+    visibility: hidden;
+}
+
+.circle-ani-1 {
+    animation: circle-ani 2.5s linear 1.1s forwards;
+}
+  
+.circle-ani-2 {
+    animation: circle-ani 2.5s linear 1.15s forwards;
+}
+  
+.circle-ani-3 {
+    animation: circle-ani 2.5s linear 1.20s forwards;
+}
+  
+.circle-ani-4 {
+    animation: circle-ani 2.5s linear 1.25s forwards;
+}
+  
+.circle-ani-5 {
+    animation: circle-ani 2.5s linear 1.30s  forwards;
+}
+  
+.circle-ani-6 {
+    animation: circle-ani 2.5s linear 1.35s forwards;
+}
+  
+.circle-ani-7 {
+    animation: circle-ani 2.5s linear 1.40s forwards;
+}
+  
+.circle-ani-8 {
+    animation: circle-ani 2.5s linear 1.45s forwards;
+}
+
+
+@keyframes circle-ani {
+    0%{
+      stroke: $color0;
+      fill: $color0;
+      opacity: 1;
+      stroke-opacity: 1;
+    }
+    18% {
+      stroke: $color0;
+      fill: none;
+    }
+    20% {
+      stroke: none;
+      fill: $color0;
+    }
+    35% {
+      stroke: $color0;
+      fill: $color0;
+    }
+    75% {
+      stroke: none;
+      fill: none;
+    }
+    85% {
+      stroke: $color0;
+      fill: $color0;
+    }
+    98% {
+      stroke: none;
+      fill: none;
+    }
+    100%{
+      visibility: visible;
+    }
+}
+
+
+.logo-path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: logoPath 4s linear forwards;
+}
+  
+@keyframes logoPath {
+    0%{
+      stroke: $color0;
+    }
+    18% {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    20% {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      stroke: $color0;
+    }
+    35% {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    75% {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+    }
+    85% {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    90% {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+    }
+    98% {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    100% {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+    }
+}
+  
+  
+.zero  {
+    fill: url(#zero);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: zero 4s linear forwards;
+}
+  
+  
+@keyframes zero {
+    0% {
+      stroke-dashoffset: 1000;
+      stroke: $color0;
+    }
+    18% {
+      stroke-dashoffset: 800;
+      stroke: $color0;
+    }
+    20% {
+      stroke-dashoffset: 0;
+    }
+    35% {
+      stroke-dashoffset: 1000;
+    }
+    70% {
+      stroke-dashoffset: 0;
+    }
+    85% {
+      stroke-dashoffset: 0;
+    }
+    90% {
+      stroke-dashoffset: 0;
+    }
+    92% {
+      stroke-dashoffset: 1000;
+    }
+    98% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      stroke: none;
+    }
+}
+
+
+.first  {
+    --xyz: url(#first);
+    fill: none;
+    animation: logo 1s linear 2.5s forwards;
+}
+.second  {
+    --xyz: url(#second);
+    fill: none;
+    animation: logo 1s linear 2.5s forwards;
+}
+.third  {
+    --xyz: url(#third);
+    fill: none;
+    animation: logo 1s linear 2.5s forwards;
+}
+.fourth  {
+    --xyz: url(#fourth);
+    fill: none;
+    animation: logo 1s linear 2.5s forwards;
+}
+
+
+@keyframes logo {
+    0% {
+      fill: var(--xyz);
+    }
+    18% {
+      fill: var(--xyz);
+    }
+    20% {
+      fill: none;
+    }
+    35% {
+      fill: var(--xyz);
+    }
+    70% {
+      fill: none;
+    }
+    85% {
+      fill: var(--xyz);
+    }
+    90% {
+      fill: none;
+    }
+    98% {
+      fill: var(--xyz);
+    }
+    100% {
+      fill: var(--xyz);
+    }
+}
+
+
+[id^="logo-"], [id^="Zero-"] {  //look after this
+    fill: none;
+}
+
+
+// --xyz is temp css variable has its global scope
+
+.Zero-1-C {
+    --xyz: #043b3b; 
+    animation: tZero 1s linear 1s forwards;
+}
+.Zero-1-O {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.1s forwards;
+}
+.Zero-1-D {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.15s forwards;
+}
+.Zero-1-E {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.2s forwards;
+}
+.Zero-1-R {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.25s forwards;
+}
+.Zero-1-S {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.3s forwards;
+}
+.Zero-2-L  {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.35s forwards;
+}
+.Zero-2-O {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.4s forwards;
+}
+.Zero-2-D {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.45s forwards;
+}
+.Zero-2-G {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.5s forwards;
+}
+.Zero-2-E {
+    --xyz: #043b3b;
+    animation: tZero 1s linear 1.55s forwards;
+}
+  
+// logo- selector is used in react and zero- sectror is used in sass
+
+// .logo-text:hover {
+//   .logo-t-1-C {
+//     --xyz: #aa3235;
+//     animation: tLogo 2s linear 0.1s forwards;
+// }
+// .logo-t-1-O {
+//     --xyz: #e37b01;
+//     animation: tLogo 2s linear 0.15s forwards;
+// }
+// .logo-t-1-D {
+//     --xyz: #e37b01;
+//     animation: tLogo 2s linear 0.20s forwards;
+// }
+// .logo-t-1-E {
+//     --xyz: #e37b01;
+//     animation: tLogo 2s linear 0.25s forwards;
+// }
+// .logo-t-1-R {
+//     --xyz: #e37b01;
+//     animation: tLogo 2s linear 0.30s forwards;
+// }
+// .logo-t-1-S {
+//     --xyz: #e37b01;
+//     animation: tLogo 2s linear 0.35s forwards;
+// }
+// .logo-t-2-L  {
+//     --xyz: #18a033;
+//     animation: tLogo 2s linear 0.40s forwards;
+// }
+// .logo-t-2-O {
+//     --xyz: #013a9e;
+//     animation: tLogo 2s linear 0.45s forwards;
+// }
+// .logo-t-2-D {
+//     --xyz: #013a9e;
+//     animation: tLogo 2s linear 0.50s forwards;
+// }
+// .logo-t-2-G {
+//     --xyz: #013a9e;
+//     animation: tLogo 2s linear 0.55s forwards;
+// }
+// .logo-t-2-E {
+//     --xyz: #013a9e;
+//     animation: tLogo 2s linear 0.60s forwards;
+// }
+// }
+
+.logo-t-1-C {
+    --xyz: #aa3235;
+    animation: tZero 2s linear 1.1s forwards;
+}
+.logo-t-1-O {
+    --xyz: #e37b01;
+    animation: tZero 2s linear 1.15s forwards;
+}
+.logo-t-1-D {
+    --xyz: #e37b01;
+    animation: tZero 2s linear 1.20s forwards;
+}
+.logo-t-1-E {
+    --xyz: #e37b01;
+    animation: tZero 2s linear 1.25s forwards;
+}
+.logo-t-1-R {
+    --xyz: #e37b01;
+    animation: tZero 2s linear 1.30s forwards;
+}
+.logo-t-1-S {
+    --xyz: #e37b01;
+    animation: tZero 2s linear 1.35s forwards;
+}
+.logo-t-2-L  {
+    --xyz: #18a033;
+    animation: tZero 2s linear 1.40s forwards;
+}
+.logo-t-2-O {
+    --xyz: #013a9e;
+    animation: tZero 2s linear 1.45s forwards;
+}
+.logo-t-2-D {
+    --xyz: #013a9e;
+    animation: tZero 2s linear 1.50s forwards;
+}
+.logo-t-2-G {
+    --xyz: #013a9e;
+    animation: tZero 2s linear 1.55s forwards;
+}
+.logo-t-2-E {
+    --xyz: #013a9e;
+    animation: tZero 2s linear 1.60s forwards;
+}
+
+  
+@keyframes tZero {
+    0% {
+      fill: none;
+    }
+    18% {
+      fill: none;
+    }
+    20% {
+      fill: var(--xyz);
+    }
+    35% {
+      fill: none;
+    }
+    70% {
+      fill: var(--xyz);
+    }
+    85% {
+      fill: var(--xyz);
+    }
+    90% {
+      fill: var(--xyz);
+    }
+    92% {
+      fill: none;
+    }
+    98% {
+      fill: var(--xyz);
+    }
+    100% {
+      fill: var(--xyz);
+    }
+}
+  
+  
+  
+@keyframes tLogo {
+    0% {
+      fill: none;
+    }
+    18% {
+      fill: none;
+    }
+    20% {
+      fill: var(--xyz);
+    }
+    35% {
+      fill: none;
+    }
+    70% {
+      fill: var(--xyz);
+    }
+    85% {
+      fill: var(--xyz);
+    }
+    90% {
+      fill: var(--xyz);
+    }
+    92% {
+      fill: none;
+    }
+    98% {
+      fill: var(--xyz);
+    }
+    100% {
+      fill: var(--xyz);
+    }
+}
+
+
+.logo-path-copy ,.makePathCopy , .makePathTopCopy, .makePathBootmCopy, .makePathLeftCopy, .makePathRightCopy {
+    stroke-dasharray:  0, 1700, 20, 1700;
+    stroke: $colorWhite;
+    fill: none;
+    z-index: 5;
+}
+  
+.logo-path-copy  { 
+    stroke-dashoffset: -200;
+    stroke: $colorWhite;
+    stroke-dasharray:  0, 100, 0.0001, 1700;
+    animation: pathCopy 1.4s linear 3s infinite forwards;
+}
