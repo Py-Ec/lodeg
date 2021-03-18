@@ -20,17 +20,17 @@ $color6: #0ed4e3;
 $color7: #20dbac;
 $color8: #acacac;
 
-// from wesite 
+// from website 
 
-$color9: #0b0b10;
-$color10: #1f2833;
-$color11: #c5c6c7;
-$color12: #66fcf1;
-$color13: #45a29e;
+$colorWeb0: #0b0b10; //color9
+$colorWeb1: #1f2833; //color10
+$colorWeb2: #c5c6c7; // color11
+$colorWeb3: #66fcf1; // color 12
+$colorWeb4: #45a29e; // color 13
 
 // header color 
 
-$color14: #0b0c10;
+$colorHeader: #0b0c10;
 
 // circuit color in logo
 
@@ -89,4 +89,6 @@ $xyz: red;
 
 // fixed size for header nav and menu item 
 
-$nav-height: 75px;
+$nav-height-mob: 50px;
+$nav-height-tab: 55px;
+$nav-height-desk: 60px;

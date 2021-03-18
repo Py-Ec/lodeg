@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Animation from './Animation';
-import HeaderComponent from './Header';
-import FooterComponent from './Footer';
+import Header from './Header';
+import Footer from './Footer';
 import Menu from "./Menu";
 
 function App() {
@@ -11,8 +11,10 @@ function App() {
             <header id="nav-header">
                 <Menu />
             </header>
-            <HeaderComponent />
-            <FooterComponent />
+            <main className="main-content">
+                <Header />
+                <Footer />
+            </main>
         </>
     );
 }

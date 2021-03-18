@@ -30,7 +30,7 @@ class Menu extends Component {
             logoCircle : LogoCircle,
             logoTextZero : LogoTextZero,
             logoText : LogoText,
-            viewBox: "0 5 330 75",
+            viewBox: "0 5 400 75",
             LogoZeroX: "80",
             LogoZeroY: "50",
             LogoTextX: "80",
@@ -113,16 +113,20 @@ class Menu extends Component {
                         {icon}
                     </ul>
                 </div>
-                <div className={`nav-item`}>
-                    <ul className={"nav-item-ul"}>
-                        {NavItem}
+                <div className={"nav-item"}>
+                    <div className={"nav-item-list-menu"}>
+                        <ul className={"nav-item-ul"}>
+                            {NavItem}
+                        </ul>
+                    </div>
+                    <div className={"nav-item-list-social"}>
                         <ul className={'nav-item-social'}>
                             {Social}
                         </ul>
                         <div className="copy-right">
                             <span>{<> &copy; 2020 Coders Lodge.</>}</span>
                         </div>
-                    </ul>
+                    </div>
                 </div>
             </nav>
         );

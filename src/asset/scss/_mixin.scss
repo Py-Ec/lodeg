@@ -36,15 +36,16 @@
     height: $height;
 }
 
-@mixin center {
+@mixin center-grid($justify: center, $align: center) {
     display: grid;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify;
+    align-items: $align;
 }
 
-@mixin logo-drop-shadow($blur: 100px) {
-    -webkit-filter: drop-shadow( 0px 0px $blur #41e9e099 );
-    filter: drop-shadow( 0px 0px $blur #41e9e099 );
+@mixin center-flex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 @mixin center-absolute($top: 50%, $left: 50%, $x: -50%, $y: -50%) {
@@ -54,16 +55,21 @@
     transform: translate($x, $y);
 } 
 
+@mixin logo-drop-shadow($left: 0px, $right: 0px, $blur: 10px) {
+    -webkit-filter: drop-shadow($left $right $blur #41e9e099 );
+    filter: drop-shadow($left $right $blur #41e9e099 );
+}
+
 @mixin list-reset {
-    list-style-type: none;
     @include zero-space;
+    list-style-type: none;
 }
 
 @mixin anchor {
-    display: inline-block;
-    text-align: center;
+    @include center-flex;
     text-decoration: none;
     border-radius: 6px;
-    padding: 0px 25px;
+    padding: 0px 20px;
     cursor: pointer;
 }
+

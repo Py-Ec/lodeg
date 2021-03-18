@@ -35,7 +35,7 @@ class Bubble extends Component {
             }, 4000);
         }
     
-        setInterval(createBubble,100);
+        setInterval(createBubble,300);
 
     }
 
