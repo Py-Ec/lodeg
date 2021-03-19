@@ -583,9 +583,9 @@ body {
             }
 
             .nav-item-btn {
-            @include full-size(100%, 75px);
-            overflow: hidden;
-            display: block;
+                @include full-size(100%, 75px);
+                overflow: hidden;
+                display: block;
 
             ul {
                 flex-direction: row;
@@ -595,14 +595,13 @@ body {
 
                 a {
                     filter: none !important;
-                    position: relative;
                 }
 
                 a::after {
                     bottom: 20px;
                     content: "";
                     display: block;
-                    position: absolute;
+                    position: relative;
                     left: 10%;
                     bottom: 20%;
                     width: 0;
@@ -612,8 +611,7 @@ body {
                 a:hover:after {
                     content: "";
                     border: 1px solid $colorWhite;
-                    height: 0.1px;
-                    width: 80%;
+                    width: 100%;
                     -webkit-transition: width 0.5s ease-in-out;
                     transition: all 0.5s ease-in-out;
                 }

@@ -95,3 +95,45 @@
           </text>
       
         </svg> 
+
+
+
+
+
+
+
+
+
+        .nav-item-btn {
+            @include full-size(100%, $nav-height);
+            overflow: hidden;
+            display: block;
+
+            ul {
+                flex-direction: row;
+                justify-content: flex-end;
+                height: inherit;
+                overflow: hidden;
+
+                a {
+                    filter: none !important;
+                }
+
+                a::after {
+                    bottom: 20px;
+                    content: "";
+                    display: block;
+                    position: relative;
+                    width: 0;
+                    -webkit-transition: width 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                }
+                a:hover:after {
+                    content: "";
+                    border: 1px solid $colorWhite;
+                    width: 100%;
+                    -webkit-transition: width 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
