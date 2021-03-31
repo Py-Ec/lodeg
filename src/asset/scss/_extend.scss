@@ -1,0 +1,113 @@
+.nav-item-btn {
+    @include full-size(100%, calc(100vh - 50px));
+    @include center-flex(space-between, flex-start);
+    flex-direction: column;
+    @include zero-space;
+    display: none;
+    overflow: hidden;
+    transition: 0.5s;
+    position: relative;
+    padding: 10px 0;
+    opacity: 0.9;
+    z-index: 10;
+
+
+    ul {
+        @include list-reset;
+        @include center-flex(flex-start, flex-start);
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+
+        a, .nav-item-list {
+            @include anchor;
+            width: auto;
+            height: $nav-height-mob;
+            line-height: $nav-height-mob;
+            color: $colorWhite;
+            font-size: 20px; 
+            transition: 0.5s;
+        }
+
+        .social-icon:hover , .nav-item-list:hover {
+            color: $colorWeb3;
+            @include logo-drop-shadow();
+            font-size: 21px;
+        }
+    }
+
+    .nav-item-social {
+        @include center-grid;
+        grid-template-columns: auto auto auto auto;
+        height: $nav-height-mob;
+
+        .social-icon {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            background-image: url("../image/social.svg");
+            background-size: 550% 550%;
+            background-repeat: no-repeat;
+        }
+
+        .icon-Facebook {
+            background-position: -8px -133px; // -12 -6 || -8 -133 is gray
+            // border: 1px solid orchid;
+        }
+
+        .icon-Facebook:hover {
+            background-position: -8px -68px; // -68 black
+        }
+
+        .icon-Facebook:focus {
+            background-position: -8px -6px; // -68 black
+        }
+
+        .icon-Instagram {
+            background-position: -63px -134px; // -12 -6 || -63 -134 is gray
+            // border: 1px solid orchid;
+        }
+
+        .icon-Instagram:hover {
+            background-position: -63px -69px; // -69 black
+            
+        }
+
+        .icon-Instagram:focus {
+            background-position: -63px -7px; // -69 black
+            
+        }
+
+        .icon-Twitter {
+            background-position: -128px -131px; // -12 -6 || -128 -131 is gray
+            // border: 1px solid orchid;
+        }
+
+        .icon-Twitter:hover {
+            background-position: -128px -67px; // -67 black
+        }
+
+        .icon-Twitter:focus {
+            background-position: -128px -7px; // -67 black
+        }
+
+        .icon-Linkedin {
+            background-position: -185px -131px; // -12 -6 || -185 -131 is gray
+            // border: 1px solid orchid;
+        }
+
+        .icon-Linkedin:hover {
+            background-position: -185px -67px; // -67 black
+        }
+
+        .icon-Linkedin:focus {
+            background-position: -185px -7px; // -67 black
+        }
+    }
+    .copy-right {
+        color: $colorWhite;
+        text-align: center;
+        margin: 8px;
+    }
+}
