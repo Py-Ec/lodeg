@@ -16,7 +16,7 @@ class Footer extends Component {
 
         const Social = this.state.social.map((x) => {
             return(
-                <a key={x.id} href={x.href} title={x.name} className={`social-icon icon-${x.name}`}></a>
+                <a key={x.id} target="_blank" href={x.href} title={x.name} className={`social-icon icon-${x.name}`}></a>
             );
         })
 

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 // import LogoText from "../asset/image/codersLodge-name.svg";
 import Logo from './shared/Logo';
 import MenuItem from './shared/MenuItem';
-import Social from './shared/Social';
 
 // importing logo state 
 import LogoOuter from './shared/Logo/LogoOuter';
@@ -47,7 +46,7 @@ class MenuTop extends Component {
         if(window.innerWidth >= 1024) {
             let elemsub = MenuItem.map((x) => {
                 return(
-                    <a key={x.id} title={x.title} href={x.href} className={"nav-item-list"} title={x.title}>{x.item}</a>
+                    <a key={x.id}  title={x.title} href={x.href} className={"nav-item-list"} title={x.title}>{x.item}</a>
                 );
             });
             let elem = <div className={"nav-item-btn"}><ul>{elemsub}</ul></div>
@@ -84,7 +83,7 @@ class MenuTop extends Component {
                         {/* <img className={"logo-img"} src={LogoImg} />
                         <img className={"logo-text"} src={LogoText} /> */}
                         <div className={"logo-img"}>
-                            <Logo logoOuter={LogoOuter} logoPath={LogoPath} logoPoint={LogoCircle} logoTextZero={LogoTextZero} logoText={LogoText} viewBox={ViewBox} LogoZeroX={LogoTextX} LogoZeroY={LogoTextY} LogoTextX={LogoTextX} LogoTextY={LogoTextY}  />
+                            <a href="/home"><Logo logoOuter={LogoOuter} logoPath={LogoPath} logoPoint={LogoCircle} logoTextZero={LogoTextZero} logoText={LogoText} viewBox={ViewBox} LogoZeroX={LogoTextX} LogoZeroY={LogoTextY} LogoTextX={LogoTextX} LogoTextY={LogoTextY}  /></a>
                         </div>
                     </div>
                     <div>
