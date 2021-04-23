@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import CCTForm from '../asset/image/formCCT.svg'
 
 class FormCCT extends Component {
     constructor(props) {
@@ -14,9 +14,9 @@ class FormCCT extends Component {
     render() {
         return(
             <div className="services-form-container">
+                <img width="100%" alt="coding competition team image" src={CCTForm} />
                 <form>
                     <div className="form-container">
-                        <h2>CODING COMPETITION TEAM</h2>
                         <div  onClick={this.props.status} className="close-cct-form">
                             <span className="close">×</span>
                         </div>

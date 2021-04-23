@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PPPForm from '../asset/image/3.svg';
 
 
 class FormPPP extends Component {
@@ -13,9 +14,9 @@ class FormPPP extends Component {
     render() {
         return(
             <div className="services-form-container">
+                <img width="100%" src={PPPForm} alt="PROJECT PARTNER PROGRAM" />
                 <form>
                     <div className="form-container">
-                        <h2>PROJECT PARTNER PROGRAM</h2>
                         <div onClick={this.props.status} className="close-ppp-form">
                             <span className="close">×</span>
                         </div>
