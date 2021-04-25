@@ -11,313 +11,113 @@
   @include zero-space;
   @include full-size();
   @include bg-gradient;
-  background-color: transparent;
+  background-color: #000;
   z-index: 0;
-}
 
-.bg-svg {
-  // circuit 'svg' tag is made by using react
-   #bg-animation {
-      @include full-size();
-      @include zero-space;
-      @include zero-position(absolute);
-      z-index: 0;
-  }
-
-
-}
-
-.bg-svg {
-  #bg-animation {
-      svg {
-          @include full-size();
-      }
-  }
-}
-
-#bg-animation {
-    .line0 {
-        animation: 15s lineAni ease infinite ; 
-    }
-    .line1 {
-        animation: 10s lineAni  ease-in infinite ;
-    }
-    .line2 {
-        animation: 12.5s lineAni  ease-in-out infinite ; 
-    }
-    .line3 {
-        animation: 7.5s lineAni  ease-out infinite ; 
-    }
-    .line4 {
-        animation: 5s lineAni  linear infinite ;
-    }
-    .line5 {
-        @include stroke($colorWhite, 1, 0.1, 20);
-        animation: 2s lineAni1 -1s linear infinite ;
-    }
-    .line6 {
-        @include stroke($colorWhite, 1, 0.1);
-        animation: 2s lineAni2  linear infinite ;
-    }
-    .line7 {
-        @include stroke($colorWhite, 1, 0.1);
-        animation: 2s lineAni3 -3s linear infinite;
-    }
-    .line8 {
-        opacity: 1;
-        animation: 2s lineAni1 -1s linear infinite ;
-    }
-}
-
-
-@keyframes lineAni {
-    0% {
-      stroke: $colorBlack;
-      stroke-opacity: 0.8;
-    }
-    10% {
-      stroke: $bgcolor1; 
-      stroke-opacity: 0.4;
-    }
-    20% {
-      stroke: $bgcolor2; 
-      stroke-opacity: 0.8;
-    }
-    40% {
-      stroke: $bgcolor4; 
-      stroke-opacity: 0.6;
-    }
-    60% {
-      stroke: $bgcolor3;
-      stroke-opacity: 0.7;
-    }
-    80% {
-      stroke: $color1;
-      stroke-opacity: 0.2;
-    }
-    100% {
-      stroke: $color2;
-      stroke-opacity: 0.2;
-    }
-}
-
-@keyframes lineAni1 {
-    0% {
-      stroke-dashoffset: 40;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-}
-
-@keyframes lineAni2 {
-    0% {
-      stroke-dasharray: 0;
-      stroke-dashoffset: 0;
-      stroke: $color3; 
-      opacity: 0.8;
-    }
-  
-    50% {
-      stroke-dasharray: 10;
-      stroke-dashoffset: 20;
-      stroke: $color4; 
-      opacity: 1;
-    }
-  
-    100% {
-      stroke-dasharray: 20;
-      stroke-dashoffset: 40;
-      stroke: $color5; 
-      opacity: 0.8;
-    }
-}
-
-  
-@keyframes lineAni3 {
-    0% {
-      stroke-dasharray: 20;
-      stroke-dashoffset: none;  
-      stroke: $color6;  
-      
-    }
-    50% {
-      stroke-dasharray: 10;
-      stroke-dashoffset: 20;
-      stroke: $color7; 
-      
-    }
-    100% {
-      stroke-dasharray: 0;
-      stroke-dashoffset: 40;
-      stroke: $colorWhite;
-      
-    }
-}
-
-.makeCircle {
-    fill: none;
-    opacity: 1;
-    animation: makeCircle 0.7s forwards;
-}
-
-@keyframes makeCircle {
-    to { 
-        fill: $color0;  
-       opacity: 1;
-    }
-}
-
-.makePath {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: makePath 2s linear 0.7s forwards;
-}
-  
-@keyframes makePath {
-    to {
-      stroke-dashoffset: 0;
-    }
-}
-  
-.makePathCopy  { 
-    stroke-dashoffset: 1800;
-    animation: pathCopy 1.5s linear 4s infinite forwards;
-}
-  
-.makePathTopCopy  { 
-    stroke-dashoffset: 2000;
-    animation: pathCopy 1.5s linear 4.0s infinite forwards;
-}
-  
-.makePathBootmCopy  { 
-    stroke-dashoffset: -2000;
-    animation: pathCopy 1.5s linear 4.0s infinite forwards;
-}
-  
-.makePathLeftCopy  { 
-    stroke-dashoffset: 2000;
-    animation: pathCopy 1.5s linear 4.0s infinite forwards;
-}
-.makePathRightCopy  { 
-    stroke-dashoffset: 1000;
-    stroke-dasharray:  0, 1000, 20, 1000;
-    animation: pathCopy 1.5s linear 3.5s infinite forwards;
-}
-  
-  
-@keyframes pathCopy {
-   to{
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-}
-
-
-#bubble {
-  @include full-size;
-  position: absolute;
-  background-color: transparent;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-
-  div { 
+  #bubble {
+    @include full-size;
     position: absolute;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    bottom: -50px;
     background-color: transparent;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    animation: animation 4s linear infinite;
+    overflow: hidden;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+  
+    span { 
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      bottom: -50px;
+      background-color: transparent;
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      animation: animation 4s linear infinite;
+    }
+    span:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: scale(0.25) translate(-70%,-70%);
+      background: radial-gradient(#fff, transparent);
+      border-radius: 50%;
+    }
+  
+    .html {
+      background-image: url("../image/new/html.svg");
+      background-size: 75% 75%;
+      background-position: 8px 10px;
+    }
+    .css {
+      background-image: url("../image/new/css.svg");
+      background-size: 90% 90%;
+      background-position: 5px 8px;
+    }
+    .js {
+      background-image: url("../image/new/js.svg");
+      background-size: 100% 100%;
+      background-position: 0px -2px;
+    }
+    .node-js {
+      background-image: url("../image/new/nodejs.svg");
+    }
+    .jqery {
+      background-image: url("../image/new/jquery.svg");
+      background-size: 85% 85%;
+      background-position: 5px 5px;
+    }
+    .react {
+      background-image: url("../image/new/react.svg");
+    }
+    .php {
+      background-image: url("../image/new/php.svg");
+      background-size: 98% 900%;
+      background-position: 3px 18px;
+    }
+    .angular {
+      background-image: url("../image/new/angular.svg");
+      background-size: 95% 95%;
+      background-position: 3px 3px;
+    }
+    .c {
+      background-image: url("../image/new/c.svg");
+    }
+    .c-push {
+      background-image: url("../image/new/cPlus.svg");
+    }
+    .c-hash {
+      background-image: url("../image/new/cHash.svg");
+    }
+    .python {
+      background-image: url("../image/new/python.svg");
+      background-size: 300% 100%;
+      background-position: 9px 8px;
+    }
+    .java {
+      background-image: url("../image/new/java.svg");
+      z-index: 20;
+    }
   }
-  div:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: scale(0.25) translate(-70%,-70%);
-    background: radial-gradient(#fff, transparent);
-    border-radius: 50%;
+  
+  @keyframes animation {
+      0% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+      99% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1200%);
+        opacity: 0;
+      }
+  
   }
 
-  .html {
-    background-image: url("../image/new/html.svg");
-    background-size: 75% 75%;
-    background-position: 8px 10px;
-  }
-  .css {
-    background-image: url("../image/new/css.svg");
-    background-size: 90% 90%;
-    background-position: 5px 8px;
-  }
-  .js {
-    background-image: url("../image/new/js.svg");
-    background-size: 100% 100%;
-    background-position: 0px -2px;
-  }
-  .node-js {
-    background-image: url("../image/new/nodejs.svg");
-  }
-  .jqery {
-    background-image: url("../image/new/jquery.svg");
-    background-size: 85% 85%;
-    background-position: 5px 5px;
-  }
-  .react {
-    background-image: url("../image/new/react.svg");
-  }
-  .php {
-    background-image: url("../image/new/php.svg");
-    background-size: 98% 900%;
-    background-position: 3px 18px;
-  }
-  .angular {
-    background-image: url("../image/new/angular.svg");
-    background-size: 95% 95%;
-    background-position: 3px 3px;
-  }
-  .c {
-    background-image: url("../image/new/c.svg");
-  }
-  .c-push {
-    background-image: url("../image/new/cPlus.svg");
-  }
-  .c-hash {
-    background-image: url("../image/new/cHash.svg");
-  }
-  .python {
-    background-image: url("../image/new/python.svg");
-    background-size: 300% 100%;
-    background-position: 9px 8px;
-  }
-  .java {
-    background-image: url("../image/new/java.svg");
-    z-index: 20;
-  }
-  // .swift {
-  //   background-image: url("../image/new/css.svg");
-  // }
 }
 
-@keyframes animation {
-    0% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-    99% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-1200%);
-      opacity: 0;
-    }
 
-}
 

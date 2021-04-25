@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="1300pt"
+   height="1600pt"
+   viewBox="0 0 100 85"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg34"
+   sodipodi:docname="codersLodge-name.svg"
+   inkscape:version="1.0.2 (e86c870, 2021-01-15)">
+  <defs
+     id="defs38" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview36"
+     showgrid="false"
+     inkscape:zoom="0.24362038"
+     inkscape:cx="-350.51006"
+     inkscape:cy="1312.5824"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34" />
+  <metadata
+     id="metadata25">
+        Coders Lodge logo
+    <rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <text
+     x="-0.35248458"
+     y="33.053753"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.7332px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;stroke-width:0.749329"
+     id="text160"
+     transform="scale(0.74933064,1.3345244)"><tspan
+       fill="#aa3235"
+       id="tspan152"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.677748"
+       dx="0"
+       dy="0">C</tspan><tspan
+       fill="#e37b01"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.2347px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:-0.299733px;stroke-width:0.677748"
+       id="tspan154"
+       dy="0"
+       dx="0">ODERS</tspan><tspan
+       id="tspan29"
+       style="stroke-width:0.749329" /><tspan
+       fill="#18a033"
+       id="tspan156"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.677748"
+       dy="0"
+       dx="0">L</tspan><tspan
+       fill="#013a9e"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.2347px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:-0.299733px;stroke-width:0.677748"
+       id="tspan158"
+       dy="0"
+       dx="0">ODGE</tspan></text>
+</svg>

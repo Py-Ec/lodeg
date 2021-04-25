@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Animation from './Animation';
-import TopMenu from "./TopMenu";
 import LeftMenu from "./LeftMenu";
+import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
 
-
 import {BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-
 
 
 class Main extends Component {
@@ -17,15 +15,41 @@ class Main extends Component {
         this.state = {
 
         }
+
+        this.menuFunction = this.menuFunction.bind(this);
     }
+
+    menuFunction() {
+        this.setState({
+            status: !this.state.status,
+        });
+        const ShowLeftMenu = document.getElementById("show-nav-item");
+        const leftMenu = document.getElementsByClassName("menu-left")[0];
+        const navElem = document.getElementsByClassName("nav")[0];
+        
+        if(this.state.status) {
+            ShowLeftMenu.classList.remove("show-nav-item");
+            navElem.classList.remove("show-nav-item");
+            leftMenu.style.zIndex = 0;
+        }
+        else {
+            ShowLeftMenu.classList.add("show-nav-item");
+            navElem.classList.add("show-nav-item");
+            leftMenu.style.zIndex = 100;
+        }
+    }
+
 
     render() {
         return(
-            <div>
+            <>
                 <Animation />
-                <header id="nav-header">
-                    <TopMenu />
-                </header>
+                {/* Header file should be in the Home component only
+                    so if we use Multiple Route component 
+                    then we have to design according to render in home component */}
+                
+                <Header MenuFunction={() => this.menuFunction()} /> 
+
                 <main className="main-container">
                     <div className="menu-left">
                         <LeftMenu />
@@ -34,18 +58,13 @@ class Main extends Component {
                         <BrowserRouter>
                             <Switch>
                                 <Route path="/home" component={() => <Home />} />
-                                {/* <Route exact path="/services" component={() => <Services />} />
-                                <Route path="/services/coding-competition-team" component={() => <FormCCT />} />
-                                <Route path="/services/project-partner-program" component={() => <Services />} />
-                                <Route path="/contactus" component={() => <Contact />} />
-                                <Route path="/aboutus" component={() => <About />} /> */}
                                 <Redirect to="/home" />
                             </Switch>
                         </BrowserRouter>
                         <Footer />
                     </div>
                 </main>
-            </div>
+            </>
         );
     }
 }

@@ -1,34 +1,83 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg >
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1300pt" height="1600pt" viewBox="0 0 100 85" preserveAspectRatio="xMidYMid meet">
-    <metadata>
-        Coders Lodge logo
-    </metadata>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600px"
+   height="160px"
+   viewBox="0 0 600 160"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="codersLodge-name.svg"
+   inkscape:version="1.0.2 (e86c870, 2021-01-15)">
+  <defs
+     id="defs282" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="380.33854"
+     inkscape:cy="289.56628"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1431"
+     inkscape:window-height="1019"
+     inkscape:window-x="438"
+     inkscape:window-y="100"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata285">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
     <text
-     x="-55%"
-     y="60%"
-     style="font-family:Arial;font-size: 25px;-inkscape-font-specification:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;letter-spacing:0px"
-     id="text160"><tspan
-       fill="#aa3235"
-       id="tspan152"
-       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
-       dx="0"
-       dy="0">C</tspan><tspan
-       fill="#e37b01"
-       style="font-size:23px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;letter-spacing: -0.4px;"
-       id="tspan154"
-       dy="0"
-       dx="0">ODERS</tspan>
-       <tspan> </tspan>
-       <tspan
-       fill="#18a033"
-       id="tspan156"
-       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
-       dy="0"
-       dx="0">L</tspan><tspan
-       fill="#013a9e"
-       style="font-size:23px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;letter-spacing: -0.4px;"
-       id="tspan158"
-       dy="0"
-       dx="0">ODGE</tspan></text>
+       x="2.8334169"
+       y="107.45375"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:87.8552px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;stroke-width:3.51422"
+       id="text160"
+       transform="scale(0.94433212,1.0589495)"><tspan
+         fill="#aa3235"
+         id="tspan152"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:3.17851"
+         dx="0"
+         dy="0">C</tspan><tspan
+         fill="#e37b01"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80.828px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:-1.40567px;stroke-width:3.17851"
+         id="tspan154"
+         dy="0"
+         dx="0">ODERS</tspan><tspan
+         id="tspan29"
+         style="stroke-width:3.51422" /><tspan
+         fill="#18a033"
+         id="tspan156"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:3.17851"
+         dy="0"
+         dx="0">L</tspan><tspan
+         fill="#013a9e"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80.828px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:-1.40567px;stroke-width:3.17851"
+         id="tspan158"
+         dy="0"
+         dx="0">ODGE</tspan></text>
+  </g>
 </svg>

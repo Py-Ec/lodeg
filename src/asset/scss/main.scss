@@ -4,13 +4,17 @@
 @import "typography";
 @import "extend";
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --xyz: 100%;
 }
 
 * {
     box-sizing: border-box;
-    
+    // border: 1px solid !important;
 }
 
 
@@ -25,79 +29,71 @@ body {
     width: 100%;
 }
 
-#nav-header {
-    .nav{
-        @include full-size(100%, auto);
-        @include zero-position(relative);
-        display: grid;
-        grid-template-columns: 60px auto;
-        background-color: $colorHeader; //new color #009688
-        z-index: 100;
-        opacity: 0.9;
-        overflow: hidden;
-        transition: ease-out height 0.5s;
-        height: 75px;
+// we are just not using the TopNav component right now so the code of Nav top is in now comment 
 
-        .nav-content {
-            //@include logo-drop-shadow(2px);
-            box-shadow: 6px 2px 10px #41e9e099, 4px 6px 100px rgba(255, 255, 255,0.1);
+
+.nav{
+    @include full-size(100%, 75px);
+    @include zero-position(relative);
+    display: flex;
+    background-color: transparent; 
+    z-index: 100;
+    opacity: 0.9;
+    overflow: hidden;
+    // border: 1px solid red;
+
+    .menu-btn {
+        @include center-flex;
+        flex-direction: column;
+        cursor: pointer;
+        height: auto;
+        margin: 10px;
+        padding: 5px;
+        // border: 1px solid salmon;
+        
+
+        .menu-bar-1, .menu-bar-2, .menu-bar-3 {
+            height: 3px;
+            margin: 3px auto;
+            width: 32px;
+            background-color: $colorWeb3;
+            border-radius: 6px;
+            transition: 0.5s;
         }
 
-        .menu-btn {
-            @include zero-position(relative);
-            @include center-flex;
-            flex-direction: column;
-            cursor: pointer;
-            height: 75px;
-            
-
-            .menu-bar-1, .menu-bar-2, .menu-bar-3 {
-                height: 3px;
-                margin: 3px auto;
-                width: 32px;
-                background-color: $colorWeb3;
-                border-radius: 6px;
-                transition: 0.5s;
-            }
-
-            .menu-bar-2 {
-                height: 1.5px;
-            }
-        }
-
-        .menu-btn:hover .menu-bar-1, .menu-btn:hover .menu-bar-3 {
-            width: 28px;
-        }
-
-        .nav-logo {
-            @include center-flex;
-            overflow: hidden;
-
-
-            .logo-img {
-                @include center-flex(flex-start, center);
-                cursor: pointer;
-
-
-                svg {
-                    width: 100%;
-                    height: 100%;
-
-                    #Zero-text, #logo-text {
-                        font-size: 18px !important;
-
-                        tspan {
-                            font-size: 16px !important;
-                        }
-                    }
-                }
-            }
+        .menu-bar-2 {
+            height: 1.5px;
         }
     }
+
+    .menu-btn:hover .menu-bar-1, .menu-btn:hover .menu-bar-3 {
+        width: 28px;
+    }
+
+    .nav-content {
+        width: 100%;
+        width: calc(100% - 62px);
+        // border: 1px solid springgreen;
+        height: 75px;
+
+        .nav-logo {
+            cursor: pointer;
+
+            .logo-text {
+               width: 100%;
+               height: 75px;
+            }
+        }
+
+        .nav-item-btn {
+            display: none;
+        }
+    }
+    
 }
 
+
 .show-nav-item {
-    height: 100% !important;
 
     .nav-logo {
         height: 75px;
@@ -141,18 +137,132 @@ body {
 }
 
 
+.header {
+    z-index: 20;
+    background-color: $colorHeader;
+    position: relative;
+    min-height: 100vh;
+    color: #ffF;
+    opacity: 0.9;
 
+    .header-container {
+        width: 100%;
+        height: 100%;
+
+        .header-content {
+
+            .header-content-img {
+               width: 100%;
+               height: 100%;
+
+               .logo-svg {
+                    .svg-logo {
+                        width: 100%;
+                    }
+               }
+            }
+            .header-content-sub {
+                h3 {
+                    text-align: center;
+                    font-size: 30px;
+                    font-variant: small-caps;
+                    animation: logoAni 1s linear 2.5s forwards infinite;
+                    
+
+                    span {
+                        color: red;
+                        font-weight: 900;
+                        
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+                form {
+                    text-align: center;
+                    input {
+                        width: 90%;
+                        height: 50px;
+                        font-size: 24px;
+                        padding: 8px 16px;
+                        margin: 5px 5%;
+                        border-radius: 6px;
+                    }
+                    button {
+                        margin: 5%;
+                        padding: 8px 16px;
+                        font-size: 24px;
+                        background-color: $color0;
+                        color: #cdcdcd;
+                        font-weight: 900;
+                        border-radius: 4px;
+                        border: none;
+                        outline: none;
+                        font-weight: 400;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+                    }
+                    button:hover {
+                        background-color: #cdcdcd;
+                        color: $color0;
+                    }
+                    button:active {
+                        box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 20px 0 rgba(255, 255, 255, 0.19);
+                        transform: translateY(2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes logoAni {
+    0%{
+        opacity: 0;
+    }
+    18% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    98% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 .main-container {
-    display: grid;
-    grid-template-columns: auto;
-
     .menu-left {
-        
+        width: 100%;
+        position: fixed;
+        top: 75px;
+        // z-index: 100; // to open the menu its on the top z-index so look on them
+        height: calc(100vh - 75px);
+        // border: 10px solid saddlebrown;
+
+
         nav {
             display: grid;
-            grid-template-columns: 60px auto;
+            grid-template-columns: 60px 100%;
+            // border: 1px solid red;
         }
         
         .nav-item-icon, .nav-item {
@@ -173,6 +283,7 @@ body {
             }
         }
     }
+    
     .main-content {
         z-index: 2;
         .Header-section {
@@ -701,63 +812,23 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-    .bg-svg{
-        .svg-logo {  
-            @include center-absolute(50%, 50%, -50%, -60%);
+    .nav{
+        overflow: visible;
+        position: relative;
+        height: 75px;
+
+        .nav-logo {
+            justify-content: flex-start;
         }
     }
-    #nav-header {
-        .nav{ 
-            overflow: visible;
-            position: relative;
-            height: 75px;
 
-            .nav-logo {
-                justify-content: flex-start;
-            }
-
-            .nav-item-btn {
-                @include full-size(100%, 75px);
-                overflow: hidden;
-                display: block;
-                ul {
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    height: inherit;
-                    overflow: hidden;
     
-                    a {
-                        filter: none !important;
-                    }
-    
-                    a::after {
-                        bottom: 20px;
-                        content: "";
-                        display: block;
-                        position: relative;
-                        left: 10%;
-                        bottom: 20%;
-                        width: 0;
-                        -webkit-transition: width 0.5s ease-in-out;
-                        transition: all 0.5s ease-in-out;
-                    }
-                    a:hover:after {
-                        content: "";
-                        border: 1px solid $colorWhite;
-                        width: 100%;
-                        -webkit-transition: width 0.5s ease-in-out;
-                        transition: all 0.5s ease-in-out;
-                    }
-                }
-
-            }
-        }
-    }
 
     .main-container {
         grid-template-columns: 60px auto;
 
         .menu-left {
+            display: none;
             .nav-item-icon {
                 display: block;
                 left: 0;
@@ -849,24 +920,96 @@ body {
 
 
 @media only screen and (min-width: 1024px) { 
-    #nav-header {
-        .nav {
-            grid-template-columns: 60px auto;
-            height: 75px;
+    .nav {
+        height: 75px;
 
-            .nav-content {
-                display: flex;
-                justify-content: space-between;
+        .menu-btn {
+            display: none;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+
+            .nav-logo {
+                .logo-text {
+                    margin-left: 35px;
+                    width: 50%;
+                }
             }
 
-            .menu-btn {
-                height: 75px;
+            .nav-item-btn {
+                @include full-size(100%, 75px);
+                overflow: hidden;
+                display: block;
+                ul {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    height: inherit;
+                    overflow: hidden;
+    
+                    a {
+                        filter: none !important;
+                    }
+    
+                    a::after {
+                        bottom: 20px;
+                        content: "";
+                        display: block;
+                        position: relative;
+                        left: 10%;
+                        bottom: 20%;
+                        width: 0;
+                        -webkit-transition: width 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    a:hover:after {
+                        content: "";
+                        border: 1px solid $colorWhite;
+                        width: 100%;
+                        -webkit-transition: width 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+    
+            }
+        }
+    }
+
+    .header {
+        .header-container {
+            // border: 1px solid red;
+            height: calc(100vh - 75px);
+            
+
+            .header-content {
+                margin: auto;
+                position: relative;
+                top: calc(25% - 75px);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0 10%;
+                // border: 1px solid yellow;
+                // height: 100%;
+
+                .header-content-img {
+                    width: 50%;
+                    
+                    // order: 2;
+                }
+                .hader-content-sub {
+                    width: 50%;
+                    // order: 1;
+                }
             }
         }
     }
 
     .main-container {
         .menu-left {
+            display: none;
+
             .nav-item {
                 width: 100%;
             }

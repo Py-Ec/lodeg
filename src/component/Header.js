@@ -1,5 +1,6 @@
 import  React,  { Component } from "react";
 import Logo from './shared/Logo';
+import TopMenu from './TopMenu';
 
 
 import LogoOuter from './shared/Logo/LogoOuter';
@@ -13,47 +14,39 @@ import LogoText from './shared/Logo/LogoText';
 class HeaderComponent extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
-            logoOuter: LogoOuter,
-            logoPath:  LogoPath,
-            logoCircle : LogoCircle,
-            logoTextZero : LogoTextZero,
-            logoText : LogoText,
-
-            viewBox: "8 5 85 85",
-            LogoZeroX: "25",
-            LogoZeroY: "84.8",
-            LogoTextX: "25",
-            LogoTextY: "84.8"
+        
         }
     }
 
     render() {
-        let winX = window.innerWidth;
-        let winY = window.innerHeight;
-        let SpcBtw;
-        let SlideView;
 
-        if(winX < 600) {
-            SpcBtw = 25;
-            SlideView = 1.35;
-        }
-        else {
-            winX = winX - 50;
-            SpcBtw = 0;
-            SlideView = 1;
-        }
+        const ViewBox = "0 0 100 80";
+        const LogoZeroX = "80";
+        const LogoZeroY = "50";
+        const LogoTextX = "80";
+        const LogoTextY = "50";
 
-        window.addEventListener("resize", ()=> {
-            winX = window.innerWidth;
-
-        })
 
         return(
-            <header className="Header-section">
-                <div className="Header-container" style={{width: `${winX}px`, height: `${winY-75}px`}}>
-                
+            <header className="header" >
+                <TopMenu status={this.props.Status} menuFunction={this.props.MenuFunction} logoOuter={LogoOuter} logoPath={LogoPath} logoCircle={LogoCircle} logoTextZero={LogoTextZero} logoText={LogoText} viewBox={ViewBox} logoZeroX={LogoZeroX} logoZeroY={LogoZeroY} logoTextX={LogoTextX} logoTextY={LogoTextY} />
+                <div className="header-container">
+                    <div className="header-content">
+                        <div className="header-content-img">
+                            <Logo passClassName="logo-svg" logoImgView={true} logoTextView={false} logoOuter={LogoOuter} logoPath={LogoPath} logoPoint={LogoCircle} logoTextZero={LogoTextZero} logoText={LogoText} viewBox={ViewBox} LogoZeroX={LogoTextX} LogoZeroY={LogoTextY} LogoTextX={LogoTextX} LogoTextY={LogoTextY}  />
+                        </div>
+                        <div className="header-content-sub">
+                            <h3> Dream |<span> Think </span>| Code </h3>
+                            
+                            <p>Coders Lodge is a Community of Coders</p>
+
+                            <form onSubmit={() => alert("Thank You")}>
+                                <input type="email" name="email" id="sub-email" placeholder="Email" required />
+                                <button type="submit">SUBSCRIBE</button>
+                            </form>
+                        </div> 
+                    </div>
                 </div>
             </header>
         );

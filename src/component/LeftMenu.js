@@ -13,6 +13,8 @@ class MenuLeft extends Component {
 
     render() {
 
+        let winY = window.innerHeight;
+
         const NavItem = MenuItem.map((x) => {
             return(
                 <a key={x.id} href={x.href} className={"nav-item-list"} title={x.title}>{x.item}</a>

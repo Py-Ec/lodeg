@@ -13,7 +13,7 @@ class Bubble extends Component {
     componentDidMount() {
         function createBubble() {
             const bubble = document.getElementById("bubble");
-            const createElem = document.createElement('div');
+            const createElem = document.createElement('span');
 
             const icon =["html","css", "js", "node-js", "jqery" , 'react', 'php', 'angular', "c", 'c-push' , "c-hash", 'python', 'java', "swift"];
         
@@ -32,7 +32,7 @@ class Bubble extends Component {
     
             setTimeout(()=> {
                 createElem.remove();
-            }, 4000);
+            }, 3000);
         }
     
         setInterval(createBubble,300);
