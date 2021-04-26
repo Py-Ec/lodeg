@@ -25,7 +25,10 @@ class MenuTop extends Component {
 
         let elemSub = MenuItem.map((x) => {
             return(
-                <a key={x.id}  title={x.title} href={x.href} className={"nav-item-list"} title={x.title}>{x.item}</a>
+                <li key={x.id}>
+                    <a title={x.title} href={x.href} className={"nav-item-list"} title={x.title}>{x.item}</a>
+                </li>
+                
             );
         });
 
