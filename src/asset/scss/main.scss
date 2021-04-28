@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 75px;
 }
 
 :root {
@@ -38,8 +39,9 @@ body {
     display: flex;
     background-color: transparent; 
     z-index: 100;
-    opacity: 0.9;
+    opacity: 1;
     overflow: hidden;
+    transition: all 1s;
     // border: 1px solid red;
 
     .menu-btn {

@@ -19,6 +19,8 @@ class Main extends Component {
         this.menuFunction = this.menuFunction.bind(this);
     }
 
+    
+
     menuFunction() {
         this.setState({
             status: !this.state.status,
@@ -46,10 +48,26 @@ class Main extends Component {
             headerElem.style.marginTop = "75px";
             leftMenu.style.zIndex = 100;
         }
+
+        
     }
 
 
     render() {
+        window.addEventListener('scroll',() => {
+            const navElem = document.getElementsByClassName("nav")[0];
+            if(window.scrollY + 75 > window.innerHeight) {
+                navElem.style.position = "fixed";
+                navElem.style.top = "0px";
+                navElem.style.backgroundColor = "#0b0c10";
+            }
+            else {
+                navElem.style.position = null;
+                navElem.style.top = null;
+                navElem.style.backgroundColor = null;
+            }
+        });
+
         return(
             <>
                 <Animation />
