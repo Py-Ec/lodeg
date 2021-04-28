@@ -33,18 +33,18 @@ class Main extends Component {
         if(this.state.status) {
             ShowLeftMenu.classList.remove("show-nav-item");
             navElem.classList.remove("show-nav-item");
-            navElem.style.position = null;
-            navElem.style.top = null;
+            // navElem.style.position = null;
+            // navElem.style.top = null;
             headerElem.style.marginTop = null;
-            navElem.style.backgroundColor = null;
+            // navElem.style.backgroundColor = null;
             leftMenu.style.zIndex = 0;
         }
         else {
             ShowLeftMenu.classList.add("show-nav-item");
             navElem.classList.add("show-nav-item");
-            navElem.style.position = "fixed";
-            navElem.style.top = "0px";
-            navElem.style.backgroundColor = "#0b0c10";
+            // navElem.style.position = "fixed";
+            // navElem.style.top = "0px";
+            // navElem.style.backgroundColor = "#0b0c10";
             headerElem.style.marginTop = "75px";
             leftMenu.style.zIndex = 100;
         }
@@ -54,19 +54,19 @@ class Main extends Component {
 
 
     render() {
-        window.addEventListener('scroll',() => {
-            const navElem = document.getElementsByClassName("nav")[0];
-            if(window.scrollY + 75 > window.innerHeight) {
-                navElem.style.position = "fixed";
-                navElem.style.top = "0px";
-                navElem.style.backgroundColor = "#0b0c10";
-            }
-            else {
-                navElem.style.position = null;
-                navElem.style.top = null;
-                navElem.style.backgroundColor = null;
-            }
-        });
+        // window.addEventListener('scroll',() => {
+        //     const navElem = document.getElementsByClassName("nav")[0];
+        //     if(window.scrollY + 75 > window.innerHeight) {
+        //         navElem.style.position = "fixed";
+        //         navElem.style.top = "0px";
+        //         navElem.style.backgroundColor = "#0b0c10";
+        //     }
+        //     else {
+        //         navElem.style.position = null;
+        //         navElem.style.top = null;
+        //         navElem.style.backgroundColor = null;
+        //     }
+        // });
 
         return(
             <>
