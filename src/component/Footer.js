@@ -1,20 +1,14 @@
 import  React,  { Component } from "react";
 
-import Social from './shared/Social';
-
 
 class Footer extends Component {
     constructor(props) {
         super(props)
-
-        this.state = {
-            social: Social
-        }
     }
 
     render() {
 
-        const Social = this.state.social.map((x) => {
+        const Social = this.props.social.map((x) => {
             return(
                 <a key={x.id} target="_blank" href={x.href} title={x.name} className={`social-icon icon-${x.name}`}></a>
             );

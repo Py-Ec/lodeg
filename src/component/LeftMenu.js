@@ -1,27 +1,20 @@
 import React, { Component } from "react";
-import MenuItem from './shared/MenuItem';
-import Social from './shared/Social';
+
 
 class MenuLeft extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-
-        }
     }
 
     render() {
 
-        let winY = window.innerHeight;
-
-        const NavItem = MenuItem.map((x) => {
+        const NavItem = this.props.menuItem.map((x) => {
             return(
                 <a key={x.id} href={x.href} className={"nav-item-list"} title={x.title}>{x.item}</a>
             );
         });
 
-        const icon = MenuItem.map((x) => {
+        const icon = this.props.menuItem.map((x) => {
             
             return(
                 <a key={x.id} className={`nav-item-list icon-${x.item.toLocaleLowerCase()}`} href={x.href} title={x.title}>
@@ -32,7 +25,7 @@ class MenuLeft extends Component {
 
         });
 
-        const social = Social.map((x) => {
+        const Social = this.props.social.map((x) => {
             return(
                 <a key={x.id} target="_blank" href={x.href} title={x.name} className={`social-icon icon-${x.name}`}></a>
             );
@@ -53,7 +46,7 @@ class MenuLeft extends Component {
                     </div>
                     <div className={"nav-item-list-social"}>
                         <ul className={'nav-item-social'}>
-                            {social}
+                            {Social}
                         </ul>
                         <div className="copy-right">
                             <span>{<> &copy; 2020 Coders Lodge.</>}</span>

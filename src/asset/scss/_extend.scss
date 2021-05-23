@@ -8,7 +8,7 @@
     transition: 0.5s;
     position: relative;
     padding: 10px 0;
-    opacity: 0.9;
+    opacity: 1;
     z-index: 10;
 
 
@@ -38,7 +38,7 @@
 
     .nav-item-social {
         @include center-grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto;
         height: $nav-height-mob;
 
         .social-icon {
@@ -52,57 +52,65 @@
         }
 
         .icon-Facebook {
-            background-position: -8px -133px; // -12 -6 || -8 -133 is gray
-            // border: 1px solid orchid;
+            background-position: -2.4px -132px;
         }
 
         .icon-Facebook:hover {
-            background-position: -8px -68px; // -68 black
+            background-position: -2.4px -68px;
         }
 
         .icon-Facebook:focus {
-            background-position: -8px -6px; // -68 black
+            background-position: -2.4px -4px;
         }
 
         .icon-Instagram {
-            background-position: -63px -134px; // -12 -6 || -63 -134 is gray
-            // border: 1px solid orchid;
+            background-position: -58px -133.5px;
         }
 
         .icon-Instagram:hover {
-            background-position: -63px -69px; // -69 black
-            
+            background-position: -58px -67.5px;
         }
 
         .icon-Instagram:focus {
-            background-position: -63px -7px; // -69 black
-            
+            background-position: -58px -3.5px;
         }
 
         .icon-Twitter {
-            background-position: -128px -131px; // -12 -6 || -128 -131 is gray
-            // border: 1px solid orchid;
+            background-position: -113.5px -131px;
         }
 
         .icon-Twitter:hover {
-            background-position: -128px -67px; // -67 black
+            background-position: -113.5px -68px;
         }
 
         .icon-Twitter:focus {
-            background-position: -128px -7px; // -67 black
+            background-position: -113.5px -4px;
         }
 
         .icon-Linkedin {
-            background-position: -185px -131px; // -12 -6 || -185 -131 is gray
-            // border: 1px solid orchid;
+            background-position: -170px -130px;
+            
         }
 
         .icon-Linkedin:hover {
-            background-position: -185px -67px; // -67 black
+            background-position: -170px -67px;
         }
 
         .icon-Linkedin:focus {
-            background-position: -185px -7px; // -67 black
+            background-position: -170px -6px;
+        }
+
+        .icon-Telegram {
+            background-position: -225px -130px;
+            
+        }
+
+        .icon-Telegram:hover {
+            background-position: -224px -68px;
+        }
+
+        .icon-Telegram:focus {
+            background-position: -224px -7px;
         }
     }
     .copy-right {

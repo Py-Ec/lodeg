@@ -4,6 +4,9 @@ import LeftMenu from "./LeftMenu";
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
+import Social from './shared/Social';
+import MenuItem from './shared/MenuItem';
+
 
 import {BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -79,7 +82,7 @@ class Main extends Component {
 
                 <main className="main-container">
                     <div className="menu-left">
-                        <LeftMenu />
+                        <LeftMenu social={Social} menuItem={MenuItem}/>
                     </div>
                     <div className="main-content">
                         <BrowserRouter>
@@ -88,7 +91,7 @@ class Main extends Component {
                                 <Redirect to="/home" />
                             </Switch>
                         </BrowserRouter>
-                        <Footer />
+                        <Footer social={Social} />
                     </div>
                 </main>
             </>
