@@ -15,26 +15,25 @@ const MenuItem = [
     },
     {
         id: 2,
+        item: "CHAT ROOM",
+        href: "#chat",
+        title: "chat room",
+        icon: "fas fa-comment-dots"
+    }, 
+    {
+        id: 3,
         item: "ABOUT",
         href: "#about-us",
         title: "About",
         icon: "fas fa-address-card"
     },
     {
-        id: 3,
+        id: 4,
         item: "CONTACT",
         href: "#contact-us",
         title: "Contact",
         icon: "fas fa-envelope"
     },
-    
-    // {
-    //     id: 4,
-    //     item: "PROFILE",
-    //     href: "/profile",
-    //     title: "Profile",
-    //     icon: "fas fa-user"
-    // }
 ]
 
 export default MenuItem;

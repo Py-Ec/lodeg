@@ -37,7 +37,7 @@ class Footer extends Component {
                             <a href="#">Discussion</a>
                         </div>
                     </div>
-                    <div className="footer-Documentation-link">
+                    {/* <div className="footer-Documentation-link">
                         <div className="footer-Documentation-list">
                             <h4><strong>Documentation</strong></h4>
                         </div>
@@ -56,7 +56,7 @@ class Footer extends Component {
                         <div className="footer-Documentation-list">
                             <a href="#">JavaScrip</a>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="footer-support-link">
                         <div className="footer-support-list">
                             <h4><strong>Support</strong></h4>
