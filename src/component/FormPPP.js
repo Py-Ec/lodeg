@@ -15,7 +15,7 @@ class FormPPP extends Component {
         return(
             <div className="services-form-container">
                 <img width="100%" src={PPPForm} alt="PROJECT PARTNER PROGRAM" />
-                <form>
+                <form> 
                     <div className="form-container">
                         <div onClick={this.props.status} className="close-ppp-form">
                             <span className="close">×</span>
@@ -34,7 +34,7 @@ class FormPPP extends Component {
                                     <label htmlFor="ppp-lname-input">Last Name</label>
                                 </div>
                                 <div className="form-ppp-input">
-                                    <input id="ppp-lname-input" name="ppp-lname" type="text" placeholder="First Name" />
+                                    <input id="ppp-lname-input" name="ppp-lname" type="text" placeholder="Last Name" />
                                 </div>
                             </div>
                             <div className="form-ppp-email">

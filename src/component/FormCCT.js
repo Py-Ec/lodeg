@@ -35,7 +35,7 @@ class FormCCT extends Component {
                                     <label htmlFor="cct-lname-input">Last Name</label>
                                 </div>
                                 <div className="form-cct-input">
-                                    <input id="cct-lname-input" name="cct-lname" type="text" placeholder="First Name" />
+                                    <input id="cct-lname-input" name="cct-lname" type="text" placeholder="Last Name" />
                                 </div>
                             </div>
 
