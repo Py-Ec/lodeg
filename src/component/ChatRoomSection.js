@@ -46,7 +46,7 @@ class ChatRoom extends Component {
         return(
             <section id="chat" className="chatroom">
                 <div className="chatroom-container">
-                    <h2>ChatRoom</h2>
+                    <h2>CHAT ROOM</h2>
                     <div className="chatroom-content">
                         {chat}
                     </div>
