@@ -71,7 +71,17 @@ class ServiceSection extends Component {
                         <div className="service-CCT">
                             <div className="service-CCT-content">
                                 <h3>CODING COMPETITION TEAM</h3>
-                                <p>We will find you a team member for international coding competitions and hackathons like Google Hash code, code Jam, ICPC and many others. We will match your skill with others and then we will create a best team for you so that you can crack any competitions. We always update you for latest competitions to your mail.Your team members can be from anywhere in the world because we choose members according to skills.</p>
+                                <div className="cool-content">
+                                <p>First demand of every platform for competitive coding is a perfect team. The services which we are going to provide under CCT are below mentioned:
+                                    <ul>
+                                        <li>Dedicated team members which will participate with you in different coding competitions as well as hackathons.</li>
+                                        <li>The Team members which we are going to provide to you will be of same skill level so that you can learn and grow more together.</li>
+                                        <li>Number of team members will be provided as per your demand.</li>
+                                        <li>Get Updates about latest competitions and hackathons.</li>
+                                    </ul>
+                                   <strong> NOTE: Your team members can be from any corner of this world as we are going to make team on basis of common skills.</strong>
+                                </p>
+                                </div>
                                 <button onClick={() => this.toggleFormCCT() }>REGISTER NOW</button>
                             </div>
                             <div className="service-CCT-image">
@@ -84,7 +94,9 @@ class ServiceSection extends Component {
                             </div> 
                             <div className="service-PPP-content">
                                 <h3>PROJECT PARTNER PROGRAM</h3>
-                                <p>If you are looking for a team which help you in project, then no need to go anywhere we coders lodge will find a project partner for you.</p>
+                                <div className="cool-content">
+                                <p> <strong> Passionate learners strike with at least one idea per day and the only reason that they fail in implementing this idea, is the lack of perfect partner which is essential for every project.</strong>  <br /> Coders Lodge is going to select a project partner for you depending upon the theme or the type of idea which you have selected to work upon. To make sure that you get the perfect project partner we are going to match your skills and interest with the other person, so that you do not face any sort of problem in taking a mutual decision and your project become the next leading project in technical market. Moreover, if you feel that the allotted person is appropriate partner for you then you can work on more projects with the same person and even you both can mutually decide your next project.</p>
+                                </div>
                                 <button onClick={() => this.toggleFormPPP() }>REGISTER NOW</button>
                             </div>
                         </div>

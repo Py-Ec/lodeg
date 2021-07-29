@@ -14,6 +14,7 @@ class ChatRoom extends Component {
                     img: telegramImg
 
                 },
+            
                 {
                     id: 1,
                     name: "COMPETITIVE CHATROOM",
