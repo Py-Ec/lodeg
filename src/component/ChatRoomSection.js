@@ -11,6 +11,7 @@ class ChatRoom extends Component {
                     id: 0,
                     name: "GENERAL CHATROOM",
                     description: "YOU CAN DISCUSS ON ANY TOPIC FROM YOUR SYLLABUS",
+                    link: "https://t.me/coderslodgeofficial",
                     img: telegramImg
 
                 },
@@ -19,6 +20,7 @@ class ChatRoom extends Component {
                     id: 1,
                     name: "COMPETITIVE CHATROOM",
                     description: "COMMUNICATE WITH INTERNATIONAL LEVEL CODERS. ",
+                    link: "https://discord.gg/AT2UnSjq2a",
                     img: telegramImg
                 }
             ] 
@@ -37,7 +39,7 @@ class ChatRoom extends Component {
                         <h3>{chatroom.name}</h3>
                         <p>{chatroom.description}</p>
                         <div className="chat-room-card-link">
-                            <a target="_blank" href="#">{chatroom.name}</a>
+                            <a target="_blank" href={chatroom.link}>{chatroom.name}</a>
                         </div>
                     </div>
                 </div>

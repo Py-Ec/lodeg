@@ -10,6 +10,23 @@ import MenuItem from './shared/MenuItem';
 
 import {BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
+let footerStatus = false;
+
+
+let footerMenu = () =>  {
+    let elemfooterContent = document.querySelector('.footer-content-terms');
+
+    if(!footerStatus) {
+        elemfooterContent.style.display = 'block';
+    } else {
+        elemfooterContent.style.display = 'none';
+    }
+
+    return footerStatus = !footerStatus;
+}
+
+
+
 
 class Main extends Component {
     constructor(props) {
@@ -21,6 +38,10 @@ class Main extends Component {
 
         this.menuFunction = this.menuFunction.bind(this);
     }
+
+    
+
+
 
     
 
@@ -71,6 +92,8 @@ class Main extends Component {
         //     }
         // });
 
+        
+
         return(
             <>
                 <Animation />
@@ -91,7 +114,7 @@ class Main extends Component {
                                 <Redirect to="/home" />
                             </Switch>
                         </BrowserRouter>
-                        <Footer social={Social} />
+                        <Footer social={Social} footerMenu={() => footerMenu()} />
                     </div>
                 </main>
             </>
