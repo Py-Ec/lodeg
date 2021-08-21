@@ -10,19 +10,34 @@ import MenuItem from './shared/MenuItem';
 
 import {BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-let footerStatus = false;
+let footerStatusTerms = false;
 
 
-let footerMenu = () =>  {
+let footerMenuTerms = () =>  {
     let elemfooterContent = document.querySelector('.footer-content-terms');
 
-    if(!footerStatus) {
+    if(!footerStatusTerms) {
         elemfooterContent.style.display = 'block';
     } else {
         elemfooterContent.style.display = 'none';
     }
 
-    return footerStatus = !footerStatus;
+    return footerStatusTerms = !footerStatusTerms;
+}
+
+let footerStatusPrivacy = false;
+
+
+let footerMenuPrivacy = () =>  {
+    let elemfooterContent = document.querySelector('.footer-content-privacy');
+
+    if(!footerStatusPrivacy) {
+        elemfooterContent.style.display = 'block';
+    } else {
+        elemfooterContent.style.display = 'none';
+    }
+
+    return footerStatusPrivacy = !footerStatusPrivacy;
 }
 
 
@@ -114,7 +129,7 @@ class Main extends Component {
                                 <Redirect to="/home" />
                             </Switch>
                         </BrowserRouter>
-                        <Footer social={Social} footerMenu={() => footerMenu()} />
+                        <Footer social={Social}  footerMenuTerms={() => footerMenuTerms()} footerMenuPrivacy={() => footerMenuPrivacy()}  />
                     </div>
                 </main>
             </>

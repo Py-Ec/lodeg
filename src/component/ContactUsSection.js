@@ -17,9 +17,9 @@ class ContactUs extends Component {
                         <h3>Contact Info</h3>
                         <div className="contact-us-detail-container">
                             <ul className="contact-us-detail-list">
-                                <li><i className="fas fa-phone-volume"></i> <span>+91 9525033842</span></li>
-                                <li><i className="fas fa-envelope"></i> <span>info@coderslodge.com</span></li>
-                                <li><i className="fas fa-map-marker-alt"></i> <span>2912 MeadowBrook Road Los Angeles, CA 90017</span></li>
+                                <li><i className="fas fa-phone-volume"></i> <span>+91 7707046822</span></li>
+                                <li><i className="fas fa-envelope"></i> <span>coderslodgeofficial@gmail.comm</span></li>
+                                <li><i className="fas fa-map-marker-alt"></i> <span>Chandigarh,Punjab,India</span></li>
                             </ul>
                             <ul className="contact-us-social">
                                 <li><i className="fab fa-facebook-f"></i></li>
@@ -31,9 +31,9 @@ class ContactUs extends Component {
                     </div>
                     
                     <div className="contact-us-form">
-                        <form>
+                        <form action="https://formspree.io/f/xpzkokzz" method="post">
                             <div className="contact-form-container">
-                                <h3>Send A Message</h3>
+                                <h3>Contact Us</h3>
                                 <div className="contact-form-content">
                                     <div id="contact-form-fname" className="contact-form-input">
                                         <input type="text" id="contact-fname" required/>

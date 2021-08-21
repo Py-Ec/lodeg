@@ -15,7 +15,7 @@ class FormCCT extends Component {
         return(
             <div className="services-form-container">
                 <img width="100%" alt="coding competition team image" src={CCTForm} />
-                <form>
+                <form action="https://formspree.io/f/xrgroybz" method="post">
                     <div className="form-container">
                         <div  onClick={this.props.status} className="close-cct-form">
                             <span className="close">×</span>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FormCCT from './FormCCT';
 import FormPPP from './FormPPP';
 import PPPImg from "../asset/image/PPP.png";
-import CCTImg from "../asset/image/CCT.png";
+import CCTImg from "../asset/image/CCT1.png";
 
 
 class ServiceSection extends Component {
@@ -66,13 +66,13 @@ class ServiceSection extends Component {
             <>
             <section id="services" className="services">
                 <div className="services-container">
-                    <h2>Services</h2>
+                    <h2>SERVICES</h2>
                     <div className="services-content">
                         <div className="service-CCT">
                             <div className="service-CCT-content">
                                 <h3>CODING COMPETITION TEAM</h3>
                                 <div className="cool-content">
-                                <p>First demand of every platform for competitive coding is a perfect team. The services which we are going to provide under CCT are below mentioned:
+                                <p>First demand of every platform for competitive coding is a perfect team. The services which we are going to provide under CCT are mentioned below:
                                     <ul>
                                         <li>Dedicated team members which will participate with you in different coding competitions as well as hackathons.</li>
                                         <li>The Team members which we are going to provide to you will be of same skill level so that you can learn and grow more together.</li>
@@ -82,7 +82,9 @@ class ServiceSection extends Component {
                                    <strong> NOTE: Your team members can be from any corner of this world as we are going to make team on basis of common skills.</strong>
                                 </p>
                                 </div>
-                                <button onClick={() => this.toggleFormCCT() }>REGISTER NOW</button>
+                                <form action="https://forms.gle/zQ4ACJyXxmbKS6so9" target="_blank">
+                                <button type="submit"> REGISTER NOW</button>
+                                </form>
                             </div>
                             <div className="service-CCT-image">
                                 <img src={CCTImg} />
@@ -97,7 +99,9 @@ class ServiceSection extends Component {
                                 <div className="cool-content">
                                 <p> <strong> Passionate learners strike with at least one idea per day and the only reason that they fail in implementing this idea, is the lack of perfect partner which is essential for every project.</strong>  <br /> Coders Lodge is going to select a project partner for you depending upon the theme or the type of idea which you have selected to work upon. To make sure that you get the perfect project partner we are going to match your skills and interest with the other person, so that you do not face any sort of problem in taking a mutual decision and your project become the next leading project in technical market. Moreover, if you feel that the allotted person is appropriate partner for you then you can work on more projects with the same person and even you both can mutually decide your next project.</p>
                                 </div>
-                                <button onClick={() => this.toggleFormPPP() }>REGISTER NOW</button>
+                                <form action="https://forms.gle/JZH6E9WsifzXb2V7A" target="_blank">
+                                <button>REGISTER NOW</button>
+                                </form>
                             </div>
                         </div>
                     </div>
