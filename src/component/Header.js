@@ -39,9 +39,9 @@ class HeaderComponent extends Component {
                         <div className="header-content-sub">
                             <h3> Dream |<span> Think </span>| Code </h3>
                             
-                            <p>Coders Lodge is a Community of Coders</p>
+                            <p>WELCOME TO <strong> CODERS LODGE </strong></p>
 
-                            <form onSubmit={() => alert("Thank You")}>
+                            <form action="https://formspree.io/f/xgerprew" method="post">
                                 <input type="email" name="email" id="sub-email" placeholder="Email" required />
                                 <button type="submit">SUBSCRIBE</button>
                             </form>

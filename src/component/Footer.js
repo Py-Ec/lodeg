@@ -22,20 +22,23 @@ class Footer extends Component {
                     </div>
                     <div className="footer-product-link">
                         <div className="footer-product-list">
-                            <h4><strong>Product</strong></h4>
+                            <h4><strong>Services</strong></h4>
                         </div>
                         <div className="footer-product-list">
-                            <a href="#">Project Partner</a>
+                            <a href="https://forms.gle/JZH6E9WsifzXb2V7A">Project Partner Program</a>
                         </div>
                         <div className="footer-product-list">
-                            <a href="#">Coding Team</a>
+                            <a href="https://forms.gle/zQ4ACJyXxmbKS6so9">Coding Competition Team</a>
                         </div>
                         <div className="footer-product-list">
-                            <a href="#">Chat Room</a>
+                            <a href="https://t.me/coderslodgeofficial">General Chatroom</a>
                         </div>
                         <div className="footer-product-list">
+                            <a href="https://discord.gg/AT2UnSjq2a">Competitive Chatroom</a>
+                        </div>
+                        {/* <div className="footer-product-list">
                             <a href="#">Discussion</a>
-                        </div>
+                        </div> */}
                     </div>
                     {/* <div className="footer-Documentation-link">
                         <div className="footer-Documentation-list">
@@ -65,11 +68,11 @@ class Footer extends Component {
                             <a href="#">Report Bugs</a>
                         </div>
                         <div className="footer-support-list">
-                            <a href="#">Feedback</a>
+                            <a href="#">Hall of Fame</a>
                         </div>
-                        <div className="footer-support-list">
+                        {/* <div className="footer-support-list">
                             <a href="#">Contact Us</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="footer-last">
@@ -81,7 +84,7 @@ class Footer extends Component {
                             <a href="#">&copy; 2021 Coders Lodge.</a>
                         </div>
                         <div className="footer-terms-list">
-                            <a href="#">Terms</a>
+                            <a href="TermsAndConditions.html" target="_blank">Terms and Conditions</a>
                         </div>
                         <div className="footer-terms-list">
                             <a href="#">Privacy</a>

@@ -37,7 +37,7 @@ class ChatRoom extends Component {
                         <h3>{chatroom.name}</h3>
                         <p>{chatroom.description}</p>
                         <div className="chat-room-card-link">
-                            <a target="_blank" href="#">{chatroom.name}</a>
+                            <a target="_blank" href="https://discord.gg/AT2UnSjq2a">{chatroom.name}</a>
                         </div>
                     </div>
                 </div>

@@ -413,6 +413,7 @@ body {
                                 font-size: 16px;
                                 font-style: inherit;
                                 line-height: 1.5;
+                                letter-spacing: 0.5px;
                             }
                             button, a {
                                 margin: 3px;
@@ -485,7 +486,7 @@ body {
                 .form-content {
                     display: grid;
                     grid-template-columns: auto;
-
+                    
                     width: 100%;
                     font-size: 18px;
                     margin: 5px; 
@@ -605,7 +606,7 @@ body {
                 .about-us-heading {
                     h3 {
                         font-size: 23px;
-                        font-family: 'Abril Fatface', serif;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
                         text-align: center;
                         color: #20B0B0;
                         text-shadow: 2px 2px 5px rgba(255,255,255,0.3);
@@ -616,7 +617,7 @@ body {
                     p {
                         font-size: 18px;
                         text-align: center;
-                        word-spacing: 0.5px;
+                        letter-spacing: 1.5px;
                         line-height: 1.5;
                     }
 
